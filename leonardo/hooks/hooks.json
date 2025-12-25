@@ -1,0 +1,48 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "A file was just written. If this is part of a Leonardo implementation:\n1. Check if the file matches the specification requirements\n2. Verify code quality standards are met\n3. Update progress tracking if applicable\n\nFile written: $ARGUMENTS\n\nProvide a brief assessment (1-2 sentences) only if there are concerns."
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "matcher": "/leonardo",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Leonardo orchestration system activated. Prepare to:\n1. Analyze user requirements\n2. Generate comprehensive XML specification\n3. Deploy parallel subagents for implementation\n\nUser request: $ARGUMENTS\n\nBegin the Leonardo workflow by first understanding the project scope."
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "matcher": "leonardo:.*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "A Leonardo subagent has completed its task.\n\nAgent output: $ARGUMENTS\n\nAs the orchestrator:\n1. Verify the agent completed its assigned task\n2. Check for any blocking issues\n3. Determine if dependent agents can now proceed\n4. Update the overall progress status"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "prompt",
+            "prompt": "Session ending. If this was a Leonardo session:\n1. Ensure all work is committed\n2. Update progress.md with session summary\n3. List any incomplete tasks for next session\n4. Verify feature_list.json reflects current status"
+          }
+        ]
+      }
+    ]
+  }
+}

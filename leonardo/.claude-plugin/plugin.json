@@ -1,0 +1,25 @@
+{
+  "name": "leonardo",
+  "version": "1.0.0",
+  "description": "Integrated orchestration system for autonomous app, tool, and function development using parallel subagents and XML specification generation",
+  "author": {
+    "name": "LifSys",
+    "url": "https://github.com/lifsys"
+  },
+  "repository": "https://github.com/lifsys/leonardo-plugin",
+  "license": "MIT",
+  "keywords": [
+    "orchestration",
+    "autonomous-coding",
+    "specification",
+    "parallel-agents",
+    "app-development",
+    "code-generation",
+    "xml-specification"
+  ],
+  "commands": "./commands/",
+  "agents": "./agents/",
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "outputStyles": "./output-styles/"
+}

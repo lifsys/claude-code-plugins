@@ -1,0 +1,12 @@
+{
+  "name": "leonardo-local",
+  "description": "Local marketplace for Leonardo orchestration plugin",
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "leonardo",
+      "path": ".",
+      "description": "Integrated orchestration system for autonomous app, tool, and function development using parallel subagents and XML specification generation"
+    }
+  ]
+}
