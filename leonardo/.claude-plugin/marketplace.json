@@ -1,12 +1,128 @@
 {
-  "name": "leonardo-local",
-  "description": "Local marketplace for Leonardo orchestration plugin",
+  "$schema": "https://claude.ai/schemas/marketplace.json",
+  "name": "leonardo-plugins",
+  "displayName": "Leonardo Plugin Marketplace",
+  "description": "Official marketplace for Leonardo autonomous development orchestration plugins",
   "version": "1.0.0",
+  "publisher": {
+    "name": "LifSys",
+    "email": "dev@lifsys.com",
+    "url": "https://github.com/lifsys",
+    "verified": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lifsys/leonardo-plugin"
+  },
+  "homepage": "https://github.com/lifsys/leonardo-plugin",
+  "license": "MIT",
   "plugins": [
     {
       "name": "leonardo",
+      "displayName": "Leonardo - Autonomous Development Orchestrator",
       "path": ".",
-      "description": "Integrated orchestration system for autonomous app, tool, and function development using parallel subagents and XML specification generation"
+      "version": "2.0.0",
+      "description": "Integrated orchestration system for autonomous app development using parallel subagents, comprehensive XML specifications, and full-stack Playwright testing",
+      "categories": ["Development", "Testing", "Automation", "Code Generation", "DevOps"],
+      "keywords": ["orchestration", "autonomous-coding", "playwright", "testing", "gsap", "framer-motion"],
+      "featured": true,
+      "verified": false,
+      "downloads": 0,
+      "rating": 0,
+      "ratingCount": 0,
+      "lastUpdated": "2024-12-25T00:00:00Z",
+      "minClaudeCodeVersion": "1.0.0",
+      "capabilities": [
+        "commands",
+        "agents",
+        "skills",
+        "hooks",
+        "templates"
+      ],
+      "highlights": [
+        "Parallel agent orchestration for maximum efficiency",
+        "Comprehensive XML specification generation",
+        "Full-stack Playwright testing suite",
+        "GSAP and Motion/Framer animation guides",
+        "DevOps infrastructure design",
+        "Quality guardian with mandatory test execution"
+      ],
+      "screenshots": [
+        {
+          "path": "screenshots/orchestration.png",
+          "caption": "Leonardo orchestrating parallel agents"
+        },
+        {
+          "path": "screenshots/specification.png",
+          "caption": "Generated XML specification"
+        },
+        {
+          "path": "screenshots/testing.png",
+          "caption": "Playwright test execution"
+        }
+      ],
+      "changelog": [
+        {
+          "version": "2.0.0",
+          "date": "2024-12-25",
+          "changes": [
+            "Added full-stack Playwright testing infrastructure",
+            "Added frontend-design skill with GSAP and Motion/Framer guides",
+            "Added /leonardo:test command",
+            "Added quality guardian with mandatory test execution",
+            "Added page, database, integration, and health test templates",
+            "Added accessibility and performance test suites",
+            "Enhanced test-agent with full-stack validation protocol"
+          ]
+        },
+        {
+          "version": "1.0.0",
+          "date": "2024-12-24",
+          "changes": [
+            "Initial release",
+            "Core orchestration system",
+            "Parallel agent deployment",
+            "XML specification generation",
+            "DevOps architect skill"
+          ]
+        }
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "development",
+      "name": "Development",
+      "description": "Plugins for software development"
+    },
+    {
+      "id": "testing",
+      "name": "Testing",
+      "description": "Plugins for testing and quality assurance"
+    },
+    {
+      "id": "automation",
+      "name": "Automation",
+      "description": "Plugins for automating workflows"
+    },
+    {
+      "id": "code-generation",
+      "name": "Code Generation",
+      "description": "Plugins for generating code"
+    },
+    {
+      "id": "devops",
+      "name": "DevOps",
+      "description": "Plugins for infrastructure and deployment"
+    }
+  ],
+  "featured": ["leonardo"],
+  "collections": [
+    {
+      "id": "autonomous-development",
+      "name": "Autonomous Development",
+      "description": "Plugins for autonomous software development",
+      "plugins": ["leonardo"]
     }
   ]
 }

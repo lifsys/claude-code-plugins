@@ -1,102 +1,145 @@
-# Leonardo: Autonomous Development Orchestration System
+# Leonardo: Autonomous Development Orchestrator
 
-A comprehensive Claude Code plugin for orchestrating autonomous software development through parallel agents and structured XML specifications.
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/lifsys/leonardo-plugin/releases)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Claude Code](https://img.shields.io/badge/claude--code-%3E%3D1.0.0-purple.svg)](https://claude.ai/code)
+[![Playwright](https://img.shields.io/badge/tests-playwright-orange.svg)](https://playwright.dev)
 
-## Overview
+A comprehensive Claude Code plugin for orchestrating autonomous software development through parallel agents, structured XML specifications, and full-stack Playwright testing.
 
-Leonardo transforms user requirements into production-ready applications by:
-1. Generating comprehensive XML project specifications
-2. Deploying parallel specialized agents for implementation
-3. Validating against success criteria
-4. Producing complete, tested, documented codebases
+## Features
+
+- **Parallel Agent Orchestration** - Deploy multiple specialized agents simultaneously
+- **XML Specification Generation** - Comprehensive project specs with 200+ features
+- **Full-Stack Playwright Testing** - Pages, database, integration, health validation
+- **Frontend Design System** - GSAP and Motion/Framer animation guides
+- **Quality Guardian** - Mandatory test execution before handoff
+- **DevOps Architecture** - Infrastructure, CI/CD, and deployment design
 
 ## Installation
+
+### From Marketplace (Recommended)
 
 ```bash
 claude plugin install leonardo
 ```
 
-Or install from local path:
+### From GitHub
+
+```bash
+claude plugin install https://github.com/lifsys/leonardo-plugin
+```
+
+### From Local Path
+
 ```bash
 claude plugin install /path/to/leonardo
+```
+
+### Manual Installation
+
+Add to `~/.claude/settings.json`:
+
+```json
+{
+  "extraKnownMarketplaces": {
+    "leonardo-local": {
+      "source": {
+        "source": "directory",
+        "path": "/path/to/leonardo"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "leonardo@leonardo-local": true
+  }
+}
 ```
 
 ## Quick Start
 
 ### Full Development Cycle
+
 ```bash
 /leonardo build "A task management app with kanban boards and team collaboration"
 ```
 
 ### Specification Only
+
 ```bash
 /leonardo spec "AI-powered customer support chat"
 ```
 
-### Implementation from Existing Spec
+### Run Tests
+
 ```bash
-/leonardo implement ./project_specification.xml
+/leonardo:test
 ```
 
 ### Interactive Discovery
+
 ```bash
 /leonardo
 ```
 
-## Plugin Components
+## Commands
 
-### Commands
-- `/leonardo` - Main entry point for orchestration
+| Command | Description |
+|---------|-------------|
+| `/leonardo` | Launch orchestration system |
+| `/leonardo build [desc]` | Generate spec and implement |
+| `/leonardo spec [desc]` | Generate specification only |
+| `/leonardo implement [path]` | Implement from existing spec |
+| `/leonardo:test` | Run comprehensive test suite |
+| `/leonardo:test quick` | Run essential tests only |
 
-### Skills
+## Skills
+
 | Skill | Purpose |
 |-------|---------|
+| `frontend-design` | Distinctive UI with GSAP/Motion animation guides |
 | `spec-orchestrator` | Generate comprehensive XML specifications |
-| `devops-architect` | Infrastructure and deployment architecture design |
-| `code-architect` | Design database and API architecture |
-| `frontend-design` | Distinctive UI aesthetics (typography, color, animation) |
+| `quality-guardian` | Validate with mandatory test execution |
+| `devops-architect` | Infrastructure and deployment design |
+| `code-architect` | Database and API architecture |
 | `implementation-engine` | Generate production code |
-| `quality-guardian` | Validate against success criteria |
 
-### DevOps-Architect Sub-Agents
-| Agent | Role |
-|-------|------|
-| `platform-researcher` | Deep platform analysis with live WebSearch |
-| `cicd-designer` | CI/CD pipeline design and generation |
-| `security-architect` | Security architecture and configuration |
-| `observability-designer` | Monitoring, logging, and alerting |
-| `cost-optimizer` | TCO modeling and cost analysis |
+## Agents
 
-### Thinking Frameworks
-| Framework | Purpose |
-|-----------|---------|
-| `first-principles` | Decompose to fundamentals, challenge assumptions |
-| `contrarian` | Argue against obvious choices, find boundaries |
-| `user-centric` | Shortest path to user value |
-| `systems` | Model interactions, find failure cascades |
-| `economic` | True TCO, opportunity costs, break-even |
-
-### Agents
-| Agent | Role | Parallel Group |
-|-------|------|----------------|
+| Agent | Role | Group |
+|-------|------|-------|
 | `architecture-agent` | Database, API design | A |
-| `frontend-agent` | UI components, styling | A |
+| `frontend-agent` | UI components, styling, animations | A |
 | `backend-agent` | Business logic, integrations | A |
-| `devops-architect` | Infrastructure, deployment | A+ |
-| `test-agent` | Test generation, verification | B |
+| `devops-architect` | Infrastructure, CI/CD | A+ |
+| `test-agent` | Full-stack test generation & execution | B |
 | `review-agent` | Code quality, security | B |
-| `docs-agent` | Documentation, README | B |
+| `docs-agent` | Documentation | B |
 
-### Hooks
-- `PostToolUse` - Validates written files against spec
-- `UserPromptSubmit` - Activates on `/leonardo` command
-- `SubagentStop` - Coordinates agent completion
-- `Stop` - Ensures session state is saved
+## Testing Infrastructure
 
-### Output Styles
-- `specification` - XML specification formatting
-- `progress-report` - Session progress updates
-- `feature-list` - Feature JSON structure
+Leonardo includes comprehensive Playwright test templates:
+
+| Test Suite | Coverage |
+|------------|----------|
+| `pages.spec.ts` | Page rendering, navigation, forms |
+| `database.spec.ts` | Settings persistence, CRUD, data integrity |
+| `integration.spec.ts` | API health, auth, payments, WebSocket |
+| `health.spec.ts` | Health endpoints, console logs, memory |
+| `animations.spec.ts` | Stagger, scroll, hover, 60fps |
+| `visual.spec.ts` | Typography, CSS variables, dark mode |
+| `accessibility.spec.ts` | WCAG AA compliance |
+| `performance.spec.ts` | Core Web Vitals, bundle size |
+
+### Quality Gates
+
+All tests must pass before implementation is considered complete:
+
+- Unit tests: 0 failures, >80% coverage
+- E2E tests: 0 failures
+- Animation tests: 60fps maintained
+- Accessibility: 0 critical violations
+- Console: 0 JavaScript errors
 
 ## Workflow
 
@@ -104,78 +147,31 @@ claude plugin install /path/to/leonardo
 Leonardo analyzes requirements and asks clarifying questions.
 
 ### Phase 2: Specification Generation
-Generates comprehensive XML specification with:
-- Technology stack decisions
-- 14+ feature categories
-- Database schema
-- 60+ API endpoints
-- UI layout structure
-- Design system
-- 9 implementation steps
-- Success criteria
+Generates comprehensive XML specification with 200+ features.
 
-### Phase 2.5: Infrastructure Design (NEW)
-DevOps-Architect conducts:
-- Parallel platform research (AWS, GCP, Vercel, self-hosted)
-- Thinking framework application (first-principles, contrarian, user-centric)
-- Cost/benefit analysis and TCO modeling
-- Infrastructure specification generation
+### Phase 3: Infrastructure Design
+DevOps-Architect designs deployment architecture.
 
-### Phase 3: Parallel Agent Deployment
-Launches specialized agents simultaneously:
-- Group A: Architecture, Frontend, Backend
-- Group A+: DevOps-Architect (infrastructure)
-- Group B: Tests, Review, Documentation
+### Phase 4: Parallel Agent Deployment
+Launches specialized agents simultaneously.
 
-### Phase 4: Implementation Orchestration
-Coordinates agent work:
-- Monitors progress
-- Resolves dependencies
-- Integrates outputs
-- Handles conflicts
+### Phase 5: Implementation Orchestration
+Coordinates agent work and resolves dependencies.
 
-### Phase 5: Verification Loop
-Validates complete implementation:
-- Runs test suite
-- Browser verification
-- Success criteria check
-- Quality report generation
+### Phase 6: Full-Stack Testing
+Executes complete Playwright test suite.
 
-## Specification Structure
-
-```xml
-<project_specification>
-  <project_name>Name - Descriptor</project_name>
-  <overview>2-4 sentences...</overview>
-  <technology_stack>...</technology_stack>
-  <prerequisites>...</prerequisites>
-  <core_features>
-    <!-- 14 categories, 200+ features -->
-  </core_features>
-  <database_schema>...</database_schema>
-  <api_endpoints_summary>...</api_endpoints_summary>
-  <ui_layout>...</ui_layout>
-  <design_system>...</design_system>
-  <key_interactions>...</key_interactions>
-  <implementation_steps>...</implementation_steps>
-  <success_criteria>...</success_criteria>
-</project_specification>
-```
+### Phase 7: Verification Loop
+Validates against success criteria and generates report.
 
 ## Output Artifacts
 
-Leonardo produces:
-- `project_specification.xml` - Complete application specification
-- `infrastructure_specification.xml` - Deployment architecture (NEW)
+- `project_specification.xml` - Complete specification
+- `infrastructure_specification.xml` - Deployment architecture
 - `feature_list.json` - 200+ testable features
-- `init.sh` - Environment setup script
-- `progress.md` - Session progress tracker
-- `terraform/` - Infrastructure as Code templates (NEW)
-- `docker/` - Container configurations (NEW)
-- `.github/workflows/` - CI/CD pipelines (NEW)
-- `deployment-plan.md` - Rollout strategy (NEW)
-- `cost-projection.md` - Financial analysis (NEW)
-- Complete application source code
+- `playwright-report/` - Test execution report
+- `coverage/` - Code coverage report
+- Application source code
 - Test suites
 - Documentation
 
@@ -189,36 +185,50 @@ Create `.leonardo.json` in your project:
   "minFeatures": 200,
   "parallelAgents": true,
   "uiVerification": true,
-  "autoCommit": true
+  "mandatoryTests": true,
+  "testSuites": ["pages", "database", "integration", "health", "animations"]
 }
 ```
 
-## Best Practices
+## Requirements
 
-1. **Be Specific** - Detailed requirements produce better specs
-2. **Reference Apps** - Mention similar apps for design inspiration
-3. **Review Spec** - Verify specification before implementation
-4. **Incremental** - Use multiple sessions for large projects
-5. **Verify UI** - Always test through browser automation
+- Claude Code CLI >= 1.0.0
+- Node.js >= 18 (for Playwright)
+- Playwright browsers (installed automatically)
 
-## Troubleshooting
+## Contributing
 
-### Specification Generation Issues
-```bash
-./scripts/validate-spec.sh project_specification.xml
-```
-
-### Agent Coordination
-Check `progress.md` for agent status and blockers.
-
-### Feature Verification
-Review `feature_list.json` for test definitions.
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## License
 
-MIT
+[MIT](LICENSE)
 
 ## Credits
 
-Inspired by Anthropic's Claude Quickstarts autonomous-coding system.
-Integrates patterns from the official Claude Code documentation.
+- Inspired by Anthropic's Claude Quickstarts autonomous-coding system
+- Integrates patterns from official Claude Code documentation
+- Uses Playwright for browser automation
+- Animation guides based on GSAP and Motion/Framer Motion
+
+## Changelog
+
+See [CHANGELOG.md](CHANGELOG.md) for version history.
+
+### v2.0.0 (2024-12-25)
+
+- Added full-stack Playwright testing infrastructure
+- Added frontend-design skill with GSAP and Motion/Framer guides
+- Added `/leonardo:test` command
+- Added quality guardian with mandatory test execution
+- Added page, database, integration, and health test templates
+- Added accessibility and performance test suites
+- Enhanced test-agent with full-stack validation protocol
+
+### v1.0.0 (2024-12-24)
+
+- Initial release
+- Core orchestration system
+- Parallel agent deployment
+- XML specification generation
+- DevOps architect skill

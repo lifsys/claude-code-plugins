@@ -1,129 +1,137 @@
 # Changelog
 
-All notable changes to the Leonardo plugin will be documented in this file.
+All notable changes to Leonardo will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.0.0] - 2025-01-15
+## [2.0.0] - 2024-12-25
 
 ### Added
 
-#### Commands
-- `/leonardo` - Main orchestration entry point with multiple modes:
-  - `build` - Full development cycle
-  - `spec` - Specification only
-  - `implement` - Implementation from existing spec
-  - Interactive discovery mode
+- **Full-Stack Playwright Testing Infrastructure**
+  - `pages.spec.ts` - Page rendering, navigation, authentication, forms
+  - `database.spec.ts` - Settings persistence, CRUD operations, data integrity
+  - `integration.spec.ts` - External service integration, API health, WebSocket
+  - `health.spec.ts` - Health monitoring, console log review, memory tracking
+  - `animations.spec.ts` - Animation timing, stagger, scroll triggers, 60fps
+  - `visual.spec.ts` - Typography, CSS variables, dark mode, visual depth
+  - `accessibility.spec.ts` - WCAG AA compliance, keyboard navigation, ARIA
+  - `performance.spec.ts` - Core Web Vitals, memory leaks, bundle size
 
-#### Skills
-- `spec-orchestrator` - Comprehensive XML specification generator
-- `code-architect` - Database and API architecture designer
-- `implementation-engine` - Production code generator
-- `quality-guardian` - Success criteria validator
+- **Frontend Design Skill**
+  - GSAP animation guide with Timeline, ScrollTrigger, transforms
+  - Motion/Framer Motion guide with gestures, springs, layout animations
+  - Floating action menu patterns with fan-out animations
+  - Text animation patterns and philosophy
+  - Distinctive typography and color system guidelines
 
-#### Agents
-- `architecture-agent` - Database schema and API implementation
-- `frontend-agent` - UI component development
-- `backend-agent` - Business logic and integrations
-- `test-agent` - Test suite generation
-- `review-agent` - Code quality and security audit
-- `docs-agent` - Documentation generation
+- **Commands**
+  - `/leonardo:test` - Comprehensive test execution command
+  - `/leonardo:test quick` - Essential tests only
+  - `/leonardo:test [category]` - Run specific test category
 
-#### Hooks
-- `PostToolUse` - File validation after writes
-- `UserPromptSubmit` - Leonardo activation
-- `SubagentStop` - Agent coordination
-- `Stop` - Session state preservation
+- **Quality Guardian Enhancements**
+  - Mandatory test execution protocol
+  - Quality gates that block deployment without passing tests
+  - Full-stack validation checklist
+  - Automated test runner script
 
-#### Output Styles
-- `specification` - XML specification formatting
-- `progress-report` - Session progress updates
-- `feature-list` - Feature JSON structure
+- **Test Agent Enhancements**
+  - Full-stack validation protocol
+  - Execution verification checklist
+  - Enhanced handoff requirements with test proof
+  - Console error and API failure tracking
 
-#### References
-- `spec_template.md` - Complete XML template
-- `question_bank.md` - Guided questioning library
-- `feature_patterns.md` - Feature implementation patterns
-- `autonomous-coding-integration.md` - Anthropic integration docs
+- **Playwright Configuration**
+  - Multi-browser support (Chromium, Firefox, WebKit)
+  - Mobile device testing (Pixel 5, iPhone 12)
+  - Reduced motion testing project
+  - Screenshot and video on failure
+  - HTML and JSON reporters
 
-#### Scripts
-- `validate-spec.sh` - Specification validation utility
+### Changed
 
-### Features
-- Parallel agent deployment for maximum efficiency
-- Comprehensive XML specification format
-- 200+ feature requirement with testable steps
-- Multi-session development workflow
-- Immutable feature list enforcement
-- Browser-based UI verification
-- Progress tracking and reporting
+- Updated plugin.json with comprehensive marketplace metadata
+- Updated marketplace.json with proper publishing structure
+- Enhanced test-agent with mandatory test execution
+- Improved quality-guardian with blocking quality gates
 
-### Technical
-- Full Claude Code plugin specification compliance
-- Integration with Anthropic autonomous-coding patterns
-- Support for all major web frameworks
-- SQLite/PostgreSQL database support
-- Claude API streaming integration
+### Fixed
 
-## [1.1.0] - 2025-12-25
+- Animation tests now use React-safe patterns (no innerHTML)
+
+## [1.0.0] - 2024-12-24
 
 ### Added
 
-#### Skills
-- `devops-architect` - Infrastructure and deployment architecture designer with:
-  - Deep platform research using WebSearch
-  - First-principles thinking framework
-  - Contrarian analysis framework
-  - User-centric design framework
-  - Systems thinking framework
-  - Economic analysis framework
+- **Core Orchestration System**
+  - `/leonardo` command for launching orchestration
+  - `/leonardo build` for full development cycle
+  - `/leonardo spec` for specification only
+  - `/leonardo implement` for implementation from spec
 
-#### Agents (devops-architect sub-agents)
-- `platform-researcher` - Deep platform analysis with live research
-- `cicd-designer` - CI/CD pipeline design and generation
-- `security-architect` - Security architecture and configuration
-- `observability-designer` - Monitoring, logging, and alerting design
-- `cost-optimizer` - TCO modeling and cost analysis
+- **Parallel Agent Architecture**
+  - Group A: architecture-agent, frontend-agent, backend-agent
+  - Group B: test-agent, review-agent, docs-agent
+  - Coordinated handoff protocol
 
-#### Thinking Frameworks
-- `first-principles.md` - Decompose to fundamentals, challenge assumptions
-- `contrarian.md` - Argue against obvious choices, find boundaries
-- `user-centric.md` - Shortest path to user value
-- `systems.md` - Model interactions, find failure cascades
-- `economic.md` - True TCO, opportunity costs, break-even analysis
+- **XML Specification Generation**
+  - 14+ feature categories
+  - 200+ testable features
+  - Database schema definition
+  - API endpoint summary
+  - UI layout structure
+  - Design system specification
+  - Success criteria
 
-#### Research Protocols
-- `platform-comparison.md` - Structured platform evaluation methodology
-- `capability-matrix.md` - Feature comparison and scoring framework
+- **DevOps Architect Skill**
+  - Platform research with WebSearch
+  - CI/CD pipeline design
+  - Security architecture
+  - Observability design
+  - Cost optimization
+  - Thinking frameworks (first-principles, contrarian, user-centric)
 
-#### Output Templates
-- `infrastructure-spec.xml` - Complete infrastructure specification schema
-- `terraform/main.tf.template` - IaC template for multiple cloud providers
-- `docker/Dockerfile.template` - Multi-stage container build
-- `docker/docker-compose.yml.template` - Local development environment
-- `ci-cd/github-actions.yml.template` - Complete CI/CD pipeline
+- **Skills**
+  - spec-orchestrator
+  - devops-architect
+  - code-architect
+  - implementation-engine
+  - quality-guardian
 
-### Features
-- Research-driven infrastructure decisions
-- Parallel platform research with multiple agents
-- Structured thinking framework application
-- Complete IaC output generation
-- Cost projection and break-even analysis
-- Security posture design
-- Observability stack design
-- Integration with Leonardo specification workflow
+- **Hooks**
+  - PostToolUse - File validation
+  - UserPromptSubmit - Command activation
+  - SubagentStop - Agent coordination
+  - Stop - Session state saving
 
-### Technical
-- WebSearch integration for current platform data
-- Parallel sub-agent orchestration
-- Extended infrastructure_specification.xml schema
-- Multi-cloud IaC template support
+- **Output Styles**
+  - specification - XML formatting
+  - progress-report - Session updates
+  - feature-list - Feature JSON structure
 
-## [Unreleased]
+### Dependencies
 
-### Planned
-- Additional framework templates (Vue, Svelte, Next.js)
-- Custom agent creation wizard
-- Team collaboration features
-- Visual specification builder
+- Claude Code CLI >= 1.0.0
+- Playwright (for testing)
+- @axe-core/playwright (for accessibility)
+
+---
+
+## Version History
+
+| Version | Date | Highlights |
+|---------|------|------------|
+| 2.0.0 | 2024-12-25 | Full-stack Playwright testing, frontend-design skill |
+| 1.0.0 | 2024-12-24 | Initial release, core orchestration |
+
+## Upgrade Guide
+
+### From 1.0.0 to 2.0.0
+
+1. Update plugin files
+2. Install Playwright: `npx playwright install`
+3. Install axe-core: `npm install @axe-core/playwright`
+4. Use `/leonardo:test` to run tests
+5. Review new quality gates in quality-guardian
