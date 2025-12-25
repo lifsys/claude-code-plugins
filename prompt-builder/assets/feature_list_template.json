@@ -1,0 +1,78 @@
+{
+  "$schema": "Feature list schema for AI agent progress tracking",
+  "project": {
+    "name": "[PROJECT_NAME]",
+    "created_at": "[ISO_TIMESTAMP]",
+    "version": "1.0.0"
+  },
+  "instructions": {
+    "locked_message": "It is unacceptable to remove or edit tests because this could lead to missing or buggy functionality.",
+    "workflow": [
+      "1. Choose highest-priority 'failing' feature",
+      "2. Implement feature completely",
+      "3. Run all tests for that feature",
+      "4. Update status to 'passing' only when ALL tests pass",
+      "5. Commit changes with descriptive message",
+      "6. Update progress file",
+      "7. Repeat for next feature"
+    ]
+  },
+  "features": [
+    {
+      "id": "setup-001",
+      "name": "Project Foundation",
+      "description": "Initialize project structure, database, and development environment",
+      "priority": 1,
+      "status": "failing",
+      "tests": [
+        "Server starts without errors",
+        "Database connection successful",
+        "Health check endpoint returns 200",
+        "init.sh runs without errors"
+      ],
+      "dependencies": [],
+      "implementation_notes": ""
+    },
+    {
+      "id": "feature-001",
+      "name": "[FEATURE_NAME]",
+      "description": "[Detailed description of the feature]",
+      "priority": 2,
+      "status": "failing",
+      "tests": [
+        "[Test case 1]",
+        "[Test case 2]",
+        "[Test case 3]"
+      ],
+      "dependencies": ["setup-001"],
+      "implementation_notes": ""
+    },
+    {
+      "id": "feature-002",
+      "name": "[FEATURE_NAME]",
+      "description": "[Detailed description of the feature]",
+      "priority": 3,
+      "status": "failing",
+      "tests": [
+        "[Test case 1]",
+        "[Test case 2]"
+      ],
+      "dependencies": ["setup-001", "feature-001"],
+      "implementation_notes": ""
+    }
+  ],
+  "status_definitions": {
+    "failing": "Feature not yet implemented or tests not passing",
+    "in_progress": "Currently being worked on",
+    "passing": "All tests pass, feature complete",
+    "blocked": "Cannot proceed due to external dependency"
+  },
+  "metadata": {
+    "total_features": 0,
+    "passing": 0,
+    "failing": 0,
+    "in_progress": 0,
+    "blocked": 0,
+    "last_updated": "[ISO_TIMESTAMP]"
+  }
+}

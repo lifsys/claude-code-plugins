@@ -1,0 +1,21 @@
+{
+  "name": "reverse-engineer",
+  "version": "0.1.0",
+  "description": "Comprehensive fork analysis, refactoring decision support, and modular architecture guidance for maintaining divergent software forks",
+  "author": {
+    "name": "lifsys",
+    "email": "lifsys@automind.foundation"
+  },
+  "keywords": [
+    "refactoring",
+    "fork-management",
+    "architecture",
+    "legacy-code",
+    "modular-design",
+    "soft-fork",
+    "seam-identification",
+    "characterization-testing",
+    "divergence-debt"
+  ],
+  "license": "MIT"
+}
