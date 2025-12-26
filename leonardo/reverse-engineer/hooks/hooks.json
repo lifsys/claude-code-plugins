@@ -1,0 +1,14 @@
+{
+  "PostToolUse": [
+    {
+      "matcher": "Write|Edit",
+      "hooks": [
+        {
+          "type": "prompt",
+          "prompt": "If the file modified is in a directory that appears to be forked from another project (check for upstream remotes, vendor directories, or CLAUDE.md fork references), briefly remind about fork governance: 'Note: This file may be in fork territory. Consider if this change should be in an extension layer instead of modifying upstream code directly.'",
+          "timeout": 10
+        }
+      ]
+    }
+  ]
+}

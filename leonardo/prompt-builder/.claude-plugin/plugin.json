@@ -1,0 +1,58 @@
+{
+  "name": "prompt-builder",
+  "displayName": "Prompt Builder - AI Specification Generator",
+  "version": "1.0.0",
+  "description": "Comprehensive prompt specification builder for AI coding agents with structured XML output",
+  "longDescription": "Prompt Builder guides users through structured questioning to produce detailed, production-ready prompt specifications using XML tags. Features include: 14+ feature categories, database schema generation, API endpoint planning, UI/UX design system, and implementation roadmaps. Perfect for creating specifications for AI coding agents like Claude Code.",
+  "author": {
+    "name": "LifSys",
+    "email": "dev@lifsys.com",
+    "url": "https://github.com/lifsys"
+  },
+  "publisher": "lifsys",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lifsys/claude-code-plugins"
+  },
+  "homepage": "https://github.com/lifsys/claude-code-plugins#readme",
+  "bugs": {
+    "url": "https://github.com/lifsys/claude-code-plugins/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "claude-code": ">=1.0.0"
+  },
+  "categories": [
+    "Development",
+    "Code Generation",
+    "Documentation"
+  ],
+  "keywords": [
+    "prompt-engineering",
+    "specification",
+    "xml-generation",
+    "ai-agents",
+    "code-generation",
+    "project-planning",
+    "api-design",
+    "database-schema"
+  ],
+  "galleryBanner": {
+    "color": "#2d3748",
+    "theme": "dark"
+  },
+  "main": "./SKILL.md",
+  "skills": "./",
+  "references": "./references/",
+  "contributes": {
+    "skills": [
+      {
+        "name": "prompt-builder",
+        "description": "Build comprehensive XML specifications through guided questioning"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onSkill:prompt-builder"
+  ]
+}

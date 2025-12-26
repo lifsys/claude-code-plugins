@@ -1,8 +1,8 @@
 {
   "$schema": "https://claude.ai/schemas/marketplace.json",
   "name": "lifsys-plugins",
-  "displayName": "Leonardo Plugin Marketplace",
-  "description": "Official marketplace for Leonardo autonomous development orchestration plugins",
+  "displayName": "LifSys Plugin Marketplace",
+  "description": "Official marketplace for LifSys autonomous development and productivity plugins",
   "version": "1.0.0",
   "publisher": {
     "name": "LifSys",
@@ -32,13 +32,7 @@
       "ratingCount": 0,
       "lastUpdated": "2024-12-25T00:00:00Z",
       "minClaudeCodeVersion": "1.0.0",
-      "capabilities": [
-        "commands",
-        "agents",
-        "skills",
-        "hooks",
-        "templates"
-      ],
+      "capabilities": ["commands", "agents", "skills", "hooks", "templates"],
       "highlights": [
         "Parallel agent orchestration for maximum efficiency",
         "Comprehensive XML specification generation",
@@ -46,46 +40,54 @@
         "GSAP and Motion/Framer animation guides",
         "DevOps infrastructure design",
         "Quality guardian with mandatory test execution"
-      ],
-      "screenshots": [
-        {
-          "path": "screenshots/orchestration.png",
-          "caption": "Leonardo orchestrating parallel agents"
-        },
-        {
-          "path": "screenshots/specification.png",
-          "caption": "Generated XML specification"
-        },
-        {
-          "path": "screenshots/testing.png",
-          "caption": "Playwright test execution"
-        }
-      ],
-      "changelog": [
-        {
-          "version": "2.0.0",
-          "date": "2024-12-25",
-          "changes": [
-            "Added full-stack Playwright testing infrastructure",
-            "Added frontend-design skill with GSAP and Motion/Framer guides",
-            "Added /leonardo:test command",
-            "Added quality guardian with mandatory test execution",
-            "Added page, database, integration, and health test templates",
-            "Added accessibility and performance test suites",
-            "Enhanced test-agent with full-stack validation protocol"
-          ]
-        },
-        {
-          "version": "1.0.0",
-          "date": "2024-12-24",
-          "changes": [
-            "Initial release",
-            "Core orchestration system",
-            "Parallel agent deployment",
-            "XML specification generation",
-            "DevOps architect skill"
-          ]
-        }
+      ]
+    },
+    {
+      "name": "prompt-builder",
+      "displayName": "Prompt Builder - AI Specification Generator",
+      "path": "./prompt-builder",
+      "version": "1.0.0",
+      "description": "Comprehensive prompt specification builder for AI coding agents with structured XML output",
+      "categories": ["Development", "Code Generation", "Documentation"],
+      "keywords": ["prompt-engineering", "specification", "xml-generation", "ai-agents", "code-generation"],
+      "featured": false,
+      "verified": false,
+      "downloads": 0,
+      "rating": 0,
+      "ratingCount": 0,
+      "lastUpdated": "2024-12-26T00:00:00Z",
+      "minClaudeCodeVersion": "1.0.0",
+      "capabilities": ["skills"],
+      "highlights": [
+        "Guided questioning workflow for comprehensive specs",
+        "14+ feature categories with structured output",
+        "Database schema and API endpoint generation",
+        "UI/UX design system planning",
+        "Implementation roadmap creation"
+      ]
+    },
+    {
+      "name": "reverse-engineer",
+      "displayName": "Reverse Engineer - Fork Analysis & Refactoring",
+      "path": "./reverse-engineer",
+      "version": "1.0.0",
+      "description": "Comprehensive fork analysis, refactoring decision support, and modular architecture guidance",
+      "categories": ["Development", "Testing", "Code Quality"],
+      "keywords": ["refactoring", "fork-management", "architecture", "legacy-code", "seam-identification"],
+      "featured": false,
+      "verified": false,
+      "downloads": 0,
+      "rating": 0,
+      "ratingCount": 0,
+      "lastUpdated": "2024-12-26T00:00:00Z",
+      "minClaudeCodeVersion": "1.0.0",
+      "capabilities": ["commands", "agents", "skills", "hooks", "templates"],
+      "highlights": [
+        "Fork divergence analysis with debt metrics",
+        "Seam identification for safe refactoring",
+        "Characterization testing with golden master patterns",
+        "Leave-and-layer modularization strategies",
+        "Refactor vs rewrite decision support"
       ]
     }
   ],
@@ -114,6 +116,16 @@
       "id": "devops",
       "name": "DevOps",
       "description": "Plugins for infrastructure and deployment"
+    },
+    {
+      "id": "documentation",
+      "name": "Documentation",
+      "description": "Plugins for documentation generation"
+    },
+    {
+      "id": "code-quality",
+      "name": "Code Quality",
+      "description": "Plugins for code quality and refactoring"
     }
   ],
   "featured": ["leonardo"],
@@ -122,7 +134,13 @@
       "id": "autonomous-development",
       "name": "Autonomous Development",
       "description": "Plugins for autonomous software development",
-      "plugins": ["leonardo"]
+      "plugins": ["leonardo", "prompt-builder"]
+    },
+    {
+      "id": "code-maintenance",
+      "name": "Code Maintenance",
+      "description": "Plugins for maintaining and refactoring codebases",
+      "plugins": ["reverse-engineer"]
     }
   ]
 }

@@ -1,0 +1,119 @@
+{
+  "name": "reverse-engineer",
+  "displayName": "Reverse Engineer - Fork Analysis & Refactoring",
+  "version": "1.0.0",
+  "description": "Comprehensive fork analysis, refactoring decision support, and modular architecture guidance",
+  "longDescription": "Reverse Engineer provides tools for maintaining divergent software forks. Features include: fork analysis with divergence debt metrics, seam identification for safe refactoring points, characterization testing with golden master patterns, and modular architecture guidance using leave-and-layer strategies. Essential for teams managing forked codebases.",
+  "author": {
+    "name": "LifSys",
+    "email": "dev@lifsys.com",
+    "url": "https://github.com/lifsys"
+  },
+  "publisher": "lifsys",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lifsys/claude-code-plugins"
+  },
+  "homepage": "https://github.com/lifsys/claude-code-plugins#readme",
+  "bugs": {
+    "url": "https://github.com/lifsys/claude-code-plugins/issues"
+  },
+  "license": "MIT",
+  "engines": {
+    "claude-code": ">=1.0.0"
+  },
+  "categories": [
+    "Development",
+    "Testing",
+    "Code Quality"
+  ],
+  "keywords": [
+    "refactoring",
+    "fork-management",
+    "architecture",
+    "legacy-code",
+    "modular-design",
+    "soft-fork",
+    "seam-identification",
+    "characterization-testing",
+    "divergence-debt"
+  ],
+  "galleryBanner": {
+    "color": "#1a365d",
+    "theme": "dark"
+  },
+  "main": "./commands/analyze-fork.md",
+  "commands": "./commands/",
+  "agents": "./agents/",
+  "skills": "./skills/",
+  "hooks": "./hooks/hooks.json",
+  "templates": "./templates/",
+  "contributes": {
+    "commands": [
+      {
+        "command": "analyze-fork",
+        "title": "Analyze Fork",
+        "description": "Analyze divergence between fork and upstream"
+      },
+      {
+        "command": "init-fork",
+        "title": "Initialize Fork",
+        "description": "Set up fork tracking and documentation"
+      },
+      {
+        "command": "map-seams",
+        "title": "Map Seams",
+        "description": "Identify safe refactoring points in codebase"
+      },
+      {
+        "command": "gen-char-tests",
+        "title": "Generate Characterization Tests",
+        "description": "Create golden master tests for legacy code"
+      },
+      {
+        "command": "refactor-or-rewrite",
+        "title": "Refactor Decision",
+        "description": "Analyze whether to refactor or rewrite"
+      }
+    ],
+    "skills": [
+      {
+        "name": "fork-analysis",
+        "description": "Analyze fork divergence and calculate debt metrics"
+      },
+      {
+        "name": "seam-identification",
+        "description": "Find safe refactoring points using sprout and wrap patterns"
+      },
+      {
+        "name": "characterization-testing",
+        "description": "Generate golden master tests for legacy code"
+      },
+      {
+        "name": "modular-architecture",
+        "description": "Apply leave-and-layer modularization strategies"
+      }
+    ],
+    "agents": [
+      {
+        "name": "fork-analyzer",
+        "description": "Analyzes fork divergence from upstream"
+      },
+      {
+        "name": "seam-mapper",
+        "description": "Maps seams and refactoring opportunities"
+      },
+      {
+        "name": "refactor-executor",
+        "description": "Executes refactoring with safety checks"
+      }
+    ]
+  },
+  "activationEvents": [
+    "onCommand:analyze-fork",
+    "onCommand:init-fork",
+    "onCommand:map-seams",
+    "onCommand:gen-char-tests",
+    "onCommand:refactor-or-rewrite"
+  ]
+}
