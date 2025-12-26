@@ -1,6 +1,6 @@
 {
   "$schema": "https://claude.ai/schemas/marketplace.json",
-  "name": "leonardo-plugins",
+  "name": "lifsys-plugins",
   "displayName": "Leonardo Plugin Marketplace",
   "description": "Official marketplace for Leonardo autonomous development orchestration plugins",
   "version": "1.0.0",
