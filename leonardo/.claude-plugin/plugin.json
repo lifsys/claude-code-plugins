@@ -12,11 +12,11 @@
   "publisher": "lifsys",
   "repository": {
     "type": "git",
-    "url": "https://github.com/lifsys/leonardo-plugin"
+    "url": "https://github.com/lifsys/claude-code-plugins"
   },
-  "homepage": "https://github.com/lifsys/leonardo-plugin#readme",
+  "homepage": "https://github.com/lifsys/claude-code-plugins#readme",
   "bugs": {
-    "url": "https://github.com/lifsys/leonardo-plugin/issues"
+    "url": "https://github.com/lifsys/claude-code-plugins/issues"
   },
   "license": "MIT",
   "engines": {

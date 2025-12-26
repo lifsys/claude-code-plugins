@@ -12,9 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lifsys/leonardo-plugin"
+    "url": "https://github.com/lifsys/claude-code-plugins"
   },
-  "homepage": "https://github.com/lifsys/leonardo-plugin",
+  "homepage": "https://github.com/lifsys/claude-code-plugins",
   "license": "MIT",
   "plugins": [
     {

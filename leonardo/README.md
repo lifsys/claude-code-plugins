@@ -1,6 +1,6 @@
 # Leonardo: Autonomous Development Orchestrator
 
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/lifsys/leonardo-plugin/releases)
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/lifsys/claude-code-plugins/releases)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Claude Code](https://img.shields.io/badge/claude--code-%3E%3D1.0.0-purple.svg)](https://claude.ai/code)
 [![Playwright](https://img.shields.io/badge/tests-playwright-orange.svg)](https://playwright.dev)
