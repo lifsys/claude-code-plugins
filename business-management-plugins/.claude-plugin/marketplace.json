@@ -1,0 +1,63 @@
+{
+  "$schema": "https://claude.ai/schemas/marketplace.json",
+  "name": "business-management-marketplace",
+  "displayName": "Business Management Plugin Marketplace",
+  "description": "Comprehensive business management guidance through Peter Drucker's timeless wisdom on strategy, innovation, leadership, and organizational effectiveness",
+  "version": "1.0.0",
+  "publisher": {
+    "name": "LifSys",
+    "email": "dev@lifsys.com",
+    "url": "https://github.com/lifsys",
+    "verified": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lifsys/business-management-plugin"
+  },
+  "homepage": "https://github.com/lifsys/business-management-plugin",
+  "license": "MIT",
+  "plugins": [
+    {
+      "name": "business-management",
+      "displayName": "Business Management - Peter Drucker Wisdom",
+      "path": "..",
+      "version": "1.0.0",
+      "description": "Comprehensive business management guidance through Peter Drucker's timeless wisdom on strategy, innovation, leadership, and organizational effectiveness",
+      "categories": ["Business", "Management", "Strategy"],
+      "keywords": ["management", "business-strategy", "leadership", "innovation", "peter-drucker", "knowledge-workers"],
+      "featured": true,
+      "verified": false,
+      "downloads": 0,
+      "rating": 0,
+      "ratingCount": 0,
+      "lastUpdated": "2024-12-26T00:00:00Z",
+      "minClaudeCodeVersion": "1.0.0",
+      "capabilities": ["skills", "agents"],
+      "highlights": [
+        "Strategic planning guidance",
+        "Leadership and organizational effectiveness",
+        "Innovation and entrepreneurship",
+        "Knowledge worker productivity",
+        "Management by objectives"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "business",
+      "name": "Business",
+      "description": "Plugins for business operations"
+    },
+    {
+      "id": "management",
+      "name": "Management",
+      "description": "Plugins for management guidance"
+    },
+    {
+      "id": "strategy",
+      "name": "Strategy",
+      "description": "Plugins for strategic planning"
+    }
+  ],
+  "featured": ["business-management"]
+}

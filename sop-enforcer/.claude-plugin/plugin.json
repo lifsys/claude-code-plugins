@@ -1,0 +1,50 @@
+{
+  "name": "sop-enforcer",
+  "version": "1.0.0",
+  "description": "Comprehensive SOP governance enforcement with realtime monitoring, violation tracking, and interactive SOP development",
+  "author": "Strategos (AI Chief of Staff)",
+  "created": "2025-11-05",
+  "capabilities": {
+    "skills": [
+      "governance-qa"
+    ],
+    "agents": [
+      "sop-enforcer",
+      "sop-architect"
+    ],
+    "hooks": [
+      "PostToolUse/sop-monitor.sh",
+      "PreToolUse/sop-blocker.sh"
+    ],
+    "auditor_rules": [
+      "sop_authority",
+      "summary_proliferation",
+      "rogue_documentation",
+      "session_compliance"
+    ]
+  },
+  "requirements": {
+    "cc_auditor": ">=1.0.0",
+    "python": ">=3.8",
+    "dependencies": [
+      "207-SOP-AGENT-CARD-MANAGEMENT",
+      "208-SOP-SESSION-DOCUMENTATION-AUTHORITY",
+      "VIOLATION-MATRIX.md"
+    ]
+  },
+  "features": {
+    "realtime_monitoring": "Monitors all tool uses for SOP violations",
+    "blocking_enforcement": "Blocks unauthorized documentation writes pre-execution",
+    "violation_tracking": "Automatic violation entry creation with session card updates",
+    "interactive_qa": "Guides sessions through SOP development with Q&A",
+    "log_analysis": "Analyzes logs/responses for unauthorized documentation attempts",
+    "session_governance": "Enforces 208-SOP authority matrix per session type"
+  },
+  "configuration": {
+    "enforcement_level": "strict",
+    "auto_fix_violations": true,
+    "qa_mode": "interactive",
+    "log_monitoring": true,
+    "violation_grace_period_hours": 24
+  }
+}

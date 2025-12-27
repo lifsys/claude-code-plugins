@@ -1,0 +1,63 @@
+{
+  "$schema": "https://claude.ai/schemas/marketplace.json",
+  "name": "prompt-builder-marketplace",
+  "displayName": "Prompt Builder Plugin Marketplace",
+  "description": "AI specification generator for comprehensive prompt development",
+  "version": "1.0.0",
+  "publisher": {
+    "name": "LifSys",
+    "email": "dev@lifsys.com",
+    "url": "https://github.com/lifsys",
+    "verified": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lifsys/prompt-builder-plugin"
+  },
+  "homepage": "https://github.com/lifsys/prompt-builder-plugin",
+  "license": "MIT",
+  "plugins": [
+    {
+      "name": "prompt-builder",
+      "displayName": "Prompt Builder - AI Specification Generator",
+      "path": "..",
+      "version": "1.0.0",
+      "description": "Comprehensive prompt specification builder for AI coding agents with structured XML output",
+      "categories": ["Development", "Code Generation", "Documentation"],
+      "keywords": ["prompt-engineering", "specification", "xml-generation", "ai-agents", "code-generation"],
+      "featured": true,
+      "verified": false,
+      "downloads": 0,
+      "rating": 0,
+      "ratingCount": 0,
+      "lastUpdated": "2024-12-26T00:00:00Z",
+      "minClaudeCodeVersion": "1.0.0",
+      "capabilities": ["skills"],
+      "highlights": [
+        "Guided questioning workflow for comprehensive specs",
+        "14+ feature categories with structured output",
+        "Database schema and API endpoint generation",
+        "UI/UX design system planning",
+        "Implementation roadmap creation"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "development",
+      "name": "Development",
+      "description": "Plugins for software development"
+    },
+    {
+      "id": "code-generation",
+      "name": "Code Generation",
+      "description": "Plugins for generating code"
+    },
+    {
+      "id": "documentation",
+      "name": "Documentation",
+      "description": "Plugins for documentation generation"
+    }
+  ],
+  "featured": ["prompt-builder"]
+}

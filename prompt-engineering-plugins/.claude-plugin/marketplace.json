@@ -1,0 +1,63 @@
+{
+  "$schema": "https://claude.ai/schemas/marketplace.json",
+  "name": "prompt-engineering-marketplace",
+  "displayName": "Prompt Engineering Plugin Marketplace",
+  "description": "Advanced prompt engineering toolkit based on Anthropic's official curriculum - build, analyze, optimize, and validate prompts using proven techniques",
+  "version": "1.0.0",
+  "publisher": {
+    "name": "LifSys",
+    "email": "dev@lifsys.com",
+    "url": "https://github.com/lifsys",
+    "verified": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lifsys/prompt-engineering-plugin"
+  },
+  "homepage": "https://github.com/lifsys/prompt-engineering-plugin",
+  "license": "MIT",
+  "plugins": [
+    {
+      "name": "prompt-engineering-suite",
+      "displayName": "Prompt Engineering Suite - Anthropic Curriculum",
+      "path": "..",
+      "version": "1.0.0",
+      "description": "Advanced prompt engineering toolkit based on Anthropic's official curriculum - build, analyze, optimize, and validate prompts using proven techniques",
+      "categories": ["Development", "AI", "Prompt Engineering"],
+      "keywords": ["prompt-engineering", "anthropic", "ai-prompts", "optimization", "validation"],
+      "featured": true,
+      "verified": false,
+      "downloads": 0,
+      "rating": 0,
+      "ratingCount": 0,
+      "lastUpdated": "2024-12-26T00:00:00Z",
+      "minClaudeCodeVersion": "1.0.0",
+      "capabilities": ["skills", "agents", "commands", "hooks"],
+      "highlights": [
+        "Prompt debugging and analysis",
+        "Prompt refactoring and optimization",
+        "Prompt validation and testing",
+        "Prompt architecture design",
+        "Based on Anthropic's official curriculum"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "development",
+      "name": "Development",
+      "description": "Plugins for software development"
+    },
+    {
+      "id": "ai",
+      "name": "AI",
+      "description": "Plugins for AI and machine learning"
+    },
+    {
+      "id": "prompt-engineering",
+      "name": "Prompt Engineering",
+      "description": "Plugins for prompt engineering"
+    }
+  ],
+  "featured": ["prompt-engineering-suite"]
+}

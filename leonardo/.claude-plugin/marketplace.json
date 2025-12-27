@@ -1,8 +1,8 @@
 {
   "$schema": "https://claude.ai/schemas/marketplace.json",
-  "name": "lifsys-plugins",
-  "displayName": "LifSys Plugin Marketplace",
-  "description": "Official marketplace for LifSys autonomous development and productivity plugins",
+  "name": "leonardo-marketplace",
+  "displayName": "Leonardo Plugin Marketplace",
+  "description": "Autonomous development orchestrator for AI-powered app development",
   "version": "1.0.0",
   "publisher": {
     "name": "LifSys",
@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lifsys/claude-code-plugins"
+    "url": "https://github.com/lifsys/leonardo-plugin"
   },
-  "homepage": "https://github.com/lifsys/claude-code-plugins",
+  "homepage": "https://github.com/lifsys/leonardo-plugin",
   "license": "MIT",
   "plugins": [
     {
       "name": "leonardo",
       "displayName": "Leonardo - Autonomous Development Orchestrator",
-      "path": ".",
+      "path": "..",
       "version": "2.0.0",
       "description": "Integrated orchestration system for autonomous app development using parallel subagents, comprehensive XML specifications, and full-stack Playwright testing",
       "categories": ["Development", "Testing", "Automation", "Code Generation", "DevOps"],
@@ -40,54 +40,6 @@
         "GSAP and Motion/Framer animation guides",
         "DevOps infrastructure design",
         "Quality guardian with mandatory test execution"
-      ]
-    },
-    {
-      "name": "prompt-builder",
-      "displayName": "Prompt Builder - AI Specification Generator",
-      "path": "./prompt-builder",
-      "version": "1.0.0",
-      "description": "Comprehensive prompt specification builder for AI coding agents with structured XML output",
-      "categories": ["Development", "Code Generation", "Documentation"],
-      "keywords": ["prompt-engineering", "specification", "xml-generation", "ai-agents", "code-generation"],
-      "featured": false,
-      "verified": false,
-      "downloads": 0,
-      "rating": 0,
-      "ratingCount": 0,
-      "lastUpdated": "2024-12-26T00:00:00Z",
-      "minClaudeCodeVersion": "1.0.0",
-      "capabilities": ["skills"],
-      "highlights": [
-        "Guided questioning workflow for comprehensive specs",
-        "14+ feature categories with structured output",
-        "Database schema and API endpoint generation",
-        "UI/UX design system planning",
-        "Implementation roadmap creation"
-      ]
-    },
-    {
-      "name": "reverse-engineer",
-      "displayName": "Reverse Engineer - Fork Analysis & Refactoring",
-      "path": "./reverse-engineer",
-      "version": "1.0.0",
-      "description": "Comprehensive fork analysis, refactoring decision support, and modular architecture guidance",
-      "categories": ["Development", "Testing", "Code Quality"],
-      "keywords": ["refactoring", "fork-management", "architecture", "legacy-code", "seam-identification"],
-      "featured": false,
-      "verified": false,
-      "downloads": 0,
-      "rating": 0,
-      "ratingCount": 0,
-      "lastUpdated": "2024-12-26T00:00:00Z",
-      "minClaudeCodeVersion": "1.0.0",
-      "capabilities": ["commands", "agents", "skills", "hooks", "templates"],
-      "highlights": [
-        "Fork divergence analysis with debt metrics",
-        "Seam identification for safe refactoring",
-        "Characterization testing with golden master patterns",
-        "Leave-and-layer modularization strategies",
-        "Refactor vs rewrite decision support"
       ]
     }
   ],
@@ -116,31 +68,7 @@
       "id": "devops",
       "name": "DevOps",
       "description": "Plugins for infrastructure and deployment"
-    },
-    {
-      "id": "documentation",
-      "name": "Documentation",
-      "description": "Plugins for documentation generation"
-    },
-    {
-      "id": "code-quality",
-      "name": "Code Quality",
-      "description": "Plugins for code quality and refactoring"
     }
   ],
-  "featured": ["leonardo"],
-  "collections": [
-    {
-      "id": "autonomous-development",
-      "name": "Autonomous Development",
-      "description": "Plugins for autonomous software development",
-      "plugins": ["leonardo", "prompt-builder"]
-    },
-    {
-      "id": "code-maintenance",
-      "name": "Code Maintenance",
-      "description": "Plugins for maintaining and refactoring codebases",
-      "plugins": ["reverse-engineer"]
-    }
-  ]
+  "featured": ["leonardo"]
 }

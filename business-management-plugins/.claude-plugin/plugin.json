@@ -1,0 +1,23 @@
+{
+  "name": "business-management",
+  "version": "1.0.0",
+  "description": "Comprehensive business management guidance through Peter Drucker's timeless wisdom on strategy, innovation, leadership, and organizational effectiveness",
+  "author": {
+    "name": "lifsys",
+    "email": "business@lifsys.com"
+  },
+  "homepage": "https://github.com/lifsys/business-management",
+  "license": "MIT",
+  "keywords": [
+    "management",
+    "business-strategy",
+    "leadership",
+    "innovation",
+    "peter-drucker",
+    "knowledge-workers",
+    "organizational-effectiveness",
+    "entrepreneurship",
+    "strategic-planning",
+    "management-theory"
+  ]
+}

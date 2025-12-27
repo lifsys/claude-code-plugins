@@ -1,0 +1,22 @@
+{
+  "name": "law-team",
+  "version": "1.0.0",
+  "description": "Comprehensive legal assistance plugin for business foundations, contracts, compliance, and operational legalities",
+  "author": {
+    "name": "lifsys",
+    "email": "legal@lifsys.com"
+  },
+  "homepage": "https://github.com/lifsys/law-team",
+  "license": "MIT",
+  "keywords": [
+    "legal",
+    "contracts",
+    "compliance",
+    "business-law",
+    "intellectual-property",
+    "employment-law",
+    "nda",
+    "agreements",
+    "legal-foundations"
+  ]
+}

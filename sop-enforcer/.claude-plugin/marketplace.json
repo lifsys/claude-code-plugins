@@ -1,0 +1,63 @@
+{
+  "$schema": "https://claude.ai/schemas/marketplace.json",
+  "name": "sop-enforcer-marketplace",
+  "displayName": "SOP Enforcer Plugin Marketplace",
+  "description": "Comprehensive SOP governance enforcement with realtime monitoring, violation tracking, and interactive SOP development",
+  "version": "1.0.0",
+  "publisher": {
+    "name": "LifSys",
+    "email": "dev@lifsys.com",
+    "url": "https://github.com/lifsys",
+    "verified": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lifsys/sop-enforcer-plugin"
+  },
+  "homepage": "https://github.com/lifsys/sop-enforcer-plugin",
+  "license": "MIT",
+  "plugins": [
+    {
+      "name": "sop-enforcer",
+      "displayName": "SOP Enforcer - Governance & Compliance",
+      "path": "..",
+      "version": "1.0.0",
+      "description": "Comprehensive SOP governance enforcement with realtime monitoring, violation tracking, and interactive SOP development",
+      "categories": ["Governance", "Compliance", "Automation"],
+      "keywords": ["sop", "governance", "compliance", "enforcement", "monitoring", "violation-tracking"],
+      "featured": true,
+      "verified": false,
+      "downloads": 0,
+      "rating": 0,
+      "ratingCount": 0,
+      "lastUpdated": "2024-12-26T00:00:00Z",
+      "minClaudeCodeVersion": "1.0.0",
+      "capabilities": ["skills", "agents", "hooks"],
+      "highlights": [
+        "Realtime SOP violation monitoring",
+        "Blocking enforcement for unauthorized actions",
+        "Automatic violation tracking with session updates",
+        "Interactive Q&A for SOP development",
+        "Session governance with authority matrix"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "governance",
+      "name": "Governance",
+      "description": "Plugins for governance and policy enforcement"
+    },
+    {
+      "id": "compliance",
+      "name": "Compliance",
+      "description": "Plugins for compliance monitoring"
+    },
+    {
+      "id": "automation",
+      "name": "Automation",
+      "description": "Plugins for automating workflows"
+    }
+  ],
+  "featured": ["sop-enforcer"]
+}

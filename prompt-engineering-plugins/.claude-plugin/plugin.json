@@ -1,0 +1,9 @@
+{
+  "name": "prompt-engineering-suite",
+  "version": "1.0.0",
+  "description": "Advanced prompt engineering toolkit based on Anthropic's official curriculum - build, analyze, optimize, and validate prompts using proven techniques",
+  "author": {
+    "name": "Anthropic Prompt Engineering Team",
+    "email": "prompt-engineering@lifsys.com"
+  }
+}

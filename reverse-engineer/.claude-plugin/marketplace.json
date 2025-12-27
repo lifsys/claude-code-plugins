@@ -1,0 +1,63 @@
+{
+  "$schema": "https://claude.ai/schemas/marketplace.json",
+  "name": "reverse-engineer-marketplace",
+  "displayName": "Reverse Engineer Plugin Marketplace",
+  "description": "Fork analysis, refactoring decision support, and modular architecture guidance",
+  "version": "1.0.0",
+  "publisher": {
+    "name": "LifSys",
+    "email": "dev@lifsys.com",
+    "url": "https://github.com/lifsys",
+    "verified": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lifsys/reverse-engineer-plugin"
+  },
+  "homepage": "https://github.com/lifsys/reverse-engineer-plugin",
+  "license": "MIT",
+  "plugins": [
+    {
+      "name": "reverse-engineer",
+      "displayName": "Reverse Engineer - Fork Analysis & Refactoring",
+      "path": "..",
+      "version": "1.0.0",
+      "description": "Comprehensive fork analysis, refactoring decision support, and modular architecture guidance",
+      "categories": ["Development", "Testing", "Code Quality"],
+      "keywords": ["refactoring", "fork-management", "architecture", "legacy-code", "seam-identification"],
+      "featured": true,
+      "verified": false,
+      "downloads": 0,
+      "rating": 0,
+      "ratingCount": 0,
+      "lastUpdated": "2024-12-26T00:00:00Z",
+      "minClaudeCodeVersion": "1.0.0",
+      "capabilities": ["commands", "agents", "skills", "hooks", "templates"],
+      "highlights": [
+        "Fork divergence analysis with debt metrics",
+        "Seam identification for safe refactoring",
+        "Characterization testing with golden master patterns",
+        "Leave-and-layer modularization strategies",
+        "Refactor vs rewrite decision support"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "development",
+      "name": "Development",
+      "description": "Plugins for software development"
+    },
+    {
+      "id": "testing",
+      "name": "Testing",
+      "description": "Plugins for testing and quality assurance"
+    },
+    {
+      "id": "code-quality",
+      "name": "Code Quality",
+      "description": "Plugins for code quality and refactoring"
+    }
+  ],
+  "featured": ["reverse-engineer"]
+}

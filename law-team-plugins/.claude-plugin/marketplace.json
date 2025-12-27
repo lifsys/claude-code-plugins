@@ -1,0 +1,63 @@
+{
+  "$schema": "https://claude.ai/schemas/marketplace.json",
+  "name": "law-team-marketplace",
+  "displayName": "Law Team Plugin Marketplace",
+  "description": "Comprehensive legal assistance for business foundations, contracts, compliance, and operational legalities",
+  "version": "1.0.0",
+  "publisher": {
+    "name": "LifSys",
+    "email": "dev@lifsys.com",
+    "url": "https://github.com/lifsys",
+    "verified": false
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lifsys/law-team-plugin"
+  },
+  "homepage": "https://github.com/lifsys/law-team-plugin",
+  "license": "MIT",
+  "plugins": [
+    {
+      "name": "law-team",
+      "displayName": "Law Team - Business Legal Assistance",
+      "path": "..",
+      "version": "1.0.0",
+      "description": "Comprehensive legal assistance plugin for business foundations, contracts, compliance, and operational legalities",
+      "categories": ["Legal", "Business", "Compliance"],
+      "keywords": ["legal", "contracts", "compliance", "business-law", "intellectual-property", "employment-law"],
+      "featured": true,
+      "verified": false,
+      "downloads": 0,
+      "rating": 0,
+      "ratingCount": 0,
+      "lastUpdated": "2024-12-26T00:00:00Z",
+      "minClaudeCodeVersion": "1.0.0",
+      "capabilities": ["skills", "agents", "commands"],
+      "highlights": [
+        "Contract review and drafting",
+        "Business structure guidance",
+        "Compliance checking",
+        "IP protection guidance",
+        "Legal checklists for businesses"
+      ]
+    }
+  ],
+  "categories": [
+    {
+      "id": "legal",
+      "name": "Legal",
+      "description": "Plugins for legal assistance"
+    },
+    {
+      "id": "business",
+      "name": "Business",
+      "description": "Plugins for business operations"
+    },
+    {
+      "id": "compliance",
+      "name": "Compliance",
+      "description": "Plugins for compliance monitoring"
+    }
+  ],
+  "featured": ["law-team"]
+}
