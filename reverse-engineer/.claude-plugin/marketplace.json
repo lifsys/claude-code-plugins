@@ -12,9 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lifsys/reverse-engineer-plugin"
+    "url": "https://github.com/lifsys/claude-code-plugins"
   },
-  "homepage": "https://github.com/lifsys/reverse-engineer-plugin",
+  "homepage": "https://github.com/lifsys/claude-code-plugins/tree/main/reverse-engineer",
   "license": "MIT",
   "plugins": [
     {

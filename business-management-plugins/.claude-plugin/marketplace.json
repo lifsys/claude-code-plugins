@@ -12,9 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lifsys/business-management-plugin"
+    "url": "https://github.com/lifsys/claude-code-plugins"
   },
-  "homepage": "https://github.com/lifsys/business-management-plugin",
+  "homepage": "https://github.com/lifsys/claude-code-plugins/tree/main/business-management-plugins",
   "license": "MIT",
   "plugins": [
     {

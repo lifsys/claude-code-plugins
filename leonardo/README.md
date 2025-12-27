@@ -27,7 +27,7 @@ claude plugin install leonardo
 ### From GitHub
 
 ```bash
-claude plugin install https://github.com/lifsys/leonardo-plugin
+claude plugin install https://github.com/lifsys/claude-code-plugins/tree/main/leonardo
 ```
 
 ### From Local Path

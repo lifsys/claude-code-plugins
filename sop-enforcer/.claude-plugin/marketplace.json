@@ -12,9 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lifsys/sop-enforcer-plugin"
+    "url": "https://github.com/lifsys/claude-code-plugins"
   },
-  "homepage": "https://github.com/lifsys/sop-enforcer-plugin",
+  "homepage": "https://github.com/lifsys/claude-code-plugins/tree/main/sop-enforcer",
   "license": "MIT",
   "plugins": [
     {

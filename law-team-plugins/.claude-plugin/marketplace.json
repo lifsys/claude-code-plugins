@@ -12,9 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lifsys/law-team-plugin"
+    "url": "https://github.com/lifsys/claude-code-plugins"
   },
-  "homepage": "https://github.com/lifsys/law-team-plugin",
+  "homepage": "https://github.com/lifsys/claude-code-plugins/tree/main/law-team-plugins",
   "license": "MIT",
   "plugins": [
     {

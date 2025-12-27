@@ -12,9 +12,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lifsys/prompt-builder-plugin"
+    "url": "https://github.com/lifsys/claude-code-plugins"
   },
-  "homepage": "https://github.com/lifsys/prompt-builder-plugin",
+  "homepage": "https://github.com/lifsys/claude-code-plugins/tree/main/prompt-builder",
   "license": "MIT",
   "plugins": [
     {

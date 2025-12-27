@@ -213,7 +213,7 @@ lifsys <business@lifsys.com>
 ## Support
 
 For issues, questions, or contributions, please file an issue at:
-https://github.com/lifsys/business-management
+https://github.com/lifsys/claude-code-plugins/tree/main/business-management-plugins
 
 ---
 

@@ -10,7 +10,7 @@ By participating in this project, you agree to maintain a respectful and inclusi
 
 ### Reporting Issues
 
-1. Check if the issue already exists in the [Issues](https://github.com/lifsys/leonardo-plugin/issues)
+1. Check if the issue already exists in the [Issues](https://github.com/lifsys/claude-code-plugins/issues)
 2. If not, create a new issue with:
    - Clear, descriptive title
    - Detailed description of the problem
@@ -47,8 +47,8 @@ By participating in this project, you agree to maintain a respectful and inclusi
 
 ```bash
 # Clone the repository
-git clone https://github.com/lifsys/leonardo-plugin.git
-cd leonardo-plugin
+git clone https://github.com/lifsys/claude-code-plugins.git
+cd claude-code-plugins/leonardo
 
 # Install as local plugin
 claude plugin install ./
