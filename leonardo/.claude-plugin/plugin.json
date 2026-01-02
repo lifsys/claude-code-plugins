@@ -2,8 +2,8 @@
   "name": "leonardo",
   "displayName": "Leonardo - Autonomous Development Orchestrator",
   "version": "2.0.0",
-  "description": "Integrated orchestration system for autonomous app development using parallel subagents, comprehensive XML specifications, and full-stack Playwright testing",
-  "longDescription": "Leonardo transforms user requirements into production-ready applications through parallel specialized agents. Features include: comprehensive XML specification generation, frontend-design skill with GSAP and Motion/Framer animation guides, full-stack Playwright testing (pages, database, integration, health), quality guardian with mandatory test execution, and DevOps infrastructure design.",
+  "description": "Integrated orchestration system for autonomous app development with parallel subagents, XML specifications, Playwright testing, and Chrome extension exploration",
+  "longDescription": "Leonardo transforms user requirements into production-ready applications through parallel specialized agents. Features include: comprehensive XML specification generation, frontend-design skill with GSAP and Motion/Framer animation guides, full-stack Playwright testing (pages, database, integration, health), browser-explorer skill for interactive testing via Chrome extension, quality guardian with mandatory test execution, and DevOps infrastructure design.",
   "author": {
     "name": "LifSys",
     "email": "dev@lifsys.com",
@@ -44,7 +44,10 @@
     "frontend-design",
     "devops",
     "infrastructure",
-    "full-stack"
+    "full-stack",
+    "browser-automation",
+    "exploratory-testing",
+    "chrome-extension"
   ],
   "icon": "icon.png",
   "galleryBanner": {
@@ -87,6 +90,11 @@
         "command": "leonardo:test",
         "title": "Leonardo Test Runner",
         "description": "Execute comprehensive Playwright test suite"
+      },
+      {
+        "command": "leonardo:explore",
+        "title": "Browser Explorer",
+        "description": "Interactive browser exploration via Chrome extension"
       }
     ],
     "skills": [
@@ -113,6 +121,10 @@
       {
         "name": "implementation-engine",
         "description": "Generate production-ready code from specifications"
+      },
+      {
+        "name": "browser-explorer",
+        "description": "Interactive browser exploration and testing via Chrome extension"
       }
     ],
     "agents": [
@@ -186,7 +198,8 @@
   },
   "activationEvents": [
     "onCommand:leonardo",
-    "onCommand:leonardo:test"
+    "onCommand:leonardo:test",
+    "onCommand:leonardo:explore"
   ],
   "dependencies": {
     "@playwright/test": "^1.40.0",
