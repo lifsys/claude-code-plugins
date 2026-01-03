@@ -1,225 +1,30 @@
 {
   "name": "leonardo",
-  "displayName": "Leonardo - Autonomous Development Orchestrator",
-  "version": "2.0.0",
-  "description": "Integrated orchestration system for autonomous app development with parallel subagents, XML specifications, Playwright testing, and Chrome extension exploration",
-  "longDescription": "Leonardo transforms user requirements into production-ready applications through parallel specialized agents. Features include: comprehensive XML specification generation, frontend-design skill with GSAP and Motion/Framer animation guides, full-stack Playwright testing (pages, database, integration, health), browser-explorer skill for interactive testing via Chrome extension, quality guardian with mandatory test execution, and DevOps infrastructure design.",
+  "version": "2.1.0",
+  "description": "Autonomous development orchestrator with parallel agents, XML specifications, Playwright testing, and DevOps infrastructure design",
   "author": {
     "name": "LifSys",
     "email": "dev@lifsys.com",
     "url": "https://github.com/lifsys"
   },
-  "publisher": "lifsys",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lifsys/claude-code-plugins"
-  },
-  "homepage": "https://github.com/lifsys/claude-code-plugins#readme",
-  "bugs": {
-    "url": "https://github.com/lifsys/claude-code-plugins/issues"
-  },
+  "homepage": "https://github.com/lifsys/claude-code-plugins/tree/main/leonardo",
+  "repository": "https://github.com/lifsys/claude-code-plugins",
   "license": "MIT",
-  "engines": {
-    "claude-code": ">=1.0.0"
-  },
-  "categories": [
-    "Development",
-    "Testing",
-    "Automation",
-    "Code Generation",
-    "DevOps"
-  ],
   "keywords": [
     "orchestration",
     "autonomous-coding",
     "specification",
     "parallel-agents",
-    "app-development",
-    "code-generation",
-    "xml-specification",
     "playwright",
     "testing",
     "gsap",
     "framer-motion",
-    "frontend-design",
     "devops",
-    "infrastructure",
-    "full-stack",
-    "browser-automation",
-    "exploratory-testing",
-    "chrome-extension"
+    "full-stack"
   ],
-  "icon": "icon.png",
-  "galleryBanner": {
-    "color": "#1a1a2e",
-    "theme": "dark"
-  },
-  "badges": [
-    {
-      "url": "https://img.shields.io/badge/version-2.0.0-blue",
-      "href": "https://github.com/lifsys/claude-code-plugins/releases",
-      "description": "Version"
-    },
-    {
-      "url": "https://img.shields.io/badge/license-MIT-green",
-      "href": "https://github.com/lifsys/claude-code-plugins/blob/main/leonardo/LICENSE",
-      "description": "License"
-    },
-    {
-      "url": "https://img.shields.io/badge/tests-playwright-orange",
-      "href": "https://playwright.dev",
-      "description": "Testing Framework"
-    }
-  ],
-  "main": "./commands/leonardo.md",
   "commands": "./commands/",
   "agents": "./agents/",
   "skills": "./skills/",
   "hooks": "./hooks/hooks.json",
-  "outputStyles": "./output-styles/",
-  "templates": "./templates/",
-  "references": "./references/",
-  "contributes": {
-    "commands": [
-      {
-        "command": "leonardo",
-        "title": "Leonardo Orchestrator",
-        "description": "Launch the autonomous development orchestration system"
-      },
-      {
-        "command": "leonardo:test",
-        "title": "Leonardo Test Runner",
-        "description": "Execute comprehensive Playwright test suite"
-      },
-      {
-        "command": "leonardo:explore",
-        "title": "Browser Explorer",
-        "description": "Interactive browser exploration via Chrome extension"
-      }
-    ],
-    "skills": [
-      {
-        "name": "frontend-design",
-        "description": "Distinctive UI aesthetics with GSAP and Motion/Framer animation guides"
-      },
-      {
-        "name": "spec-orchestrator",
-        "description": "Generate comprehensive XML project specifications"
-      },
-      {
-        "name": "quality-guardian",
-        "description": "Validate implementations with mandatory test execution"
-      },
-      {
-        "name": "devops-architect",
-        "description": "Infrastructure and deployment architecture design"
-      },
-      {
-        "name": "code-architect",
-        "description": "Database schema, API architecture, and migration strategy"
-      },
-      {
-        "name": "implementation-engine",
-        "description": "Generate production-ready code from specifications"
-      },
-      {
-        "name": "browser-explorer",
-        "description": "Interactive browser exploration and testing via Chrome extension"
-      },
-      {
-        "name": "orchestration-coordinator",
-        "description": "Master coordinator for parallel agent management, conflict detection, and progress tracking"
-      },
-      {
-        "name": "error-recovery",
-        "description": "Standardized error handling, retry logic, and rollback workflows"
-      },
-      {
-        "name": "docs-generator",
-        "description": "OpenAPI, README, architecture docs, and component documentation generation"
-      }
-    ],
-    "agents": [
-      {
-        "name": "test-agent",
-        "description": "Full-stack test generation and execution with Playwright"
-      },
-      {
-        "name": "frontend-agent",
-        "description": "UI component development with animation focus"
-      },
-      {
-        "name": "backend-agent",
-        "description": "Business logic and API implementation"
-      },
-      {
-        "name": "architecture-agent",
-        "description": "Database and system architecture"
-      },
-      {
-        "name": "devops-architect",
-        "description": "Infrastructure, CI/CD, and deployment"
-      },
-      {
-        "name": "review-agent",
-        "description": "Code review and security audit"
-      },
-      {
-        "name": "docs-agent",
-        "description": "Documentation generation"
-      }
-    ],
-    "templates": [
-      {
-        "name": "playwright.config.ts",
-        "description": "Multi-browser Playwright configuration"
-      },
-      {
-        "name": "pages.spec.ts",
-        "description": "Page validation and navigation tests"
-      },
-      {
-        "name": "database.spec.ts",
-        "description": "Database persistence and CRUD tests"
-      },
-      {
-        "name": "integration.spec.ts",
-        "description": "External service integration tests"
-      },
-      {
-        "name": "health.spec.ts",
-        "description": "Health monitoring and log review tests"
-      },
-      {
-        "name": "animations.spec.ts",
-        "description": "Frontend animation validation tests"
-      },
-      {
-        "name": "visual.spec.ts",
-        "description": "Visual design system tests"
-      },
-      {
-        "name": "accessibility.spec.ts",
-        "description": "WCAG AA accessibility compliance tests"
-      },
-      {
-        "name": "performance.spec.ts",
-        "description": "Core Web Vitals and performance tests"
-      }
-    ]
-  },
-  "activationEvents": [
-    "onCommand:leonardo",
-    "onCommand:leonardo:test",
-    "onCommand:leonardo:explore"
-  ],
-  "dependencies": {
-    "@playwright/test": "^1.40.0",
-    "@axe-core/playwright": "^4.8.0"
-  },
-  "devDependencies": {},
-  "funding": {
-    "type": "github",
-    "url": "https://github.com/sponsors/lifsys"
-  }
+  "outputStyles": "./output-styles/"
 }
