@@ -97,12 +97,16 @@ Add to `~/.claude/settings.json`:
 
 | Skill | Purpose |
 |-------|---------|
-| `frontend-design` | Distinctive UI with GSAP/Motion animation guides |
 | `spec-orchestrator` | Generate comprehensive XML specifications |
+| `orchestration-coordinator` | **NEW** Agent management, conflict resolution, progress tracking |
+| `error-recovery` | **NEW** Failure handling, retry logic, rollback workflows |
+| `docs-generator` | **NEW** OpenAPI, README, architecture documentation |
+| `frontend-design` | Distinctive UI with GSAP/Motion animation guides |
 | `quality-guardian` | Validate with mandatory test execution |
 | `devops-architect` | Infrastructure and deployment design |
-| `code-architect` | Database and API architecture |
+| `code-architect` | Database schema, API architecture, and migrations |
 | `implementation-engine` | Generate production code |
+| `browser-explorer` | Interactive browser exploration via Chrome extension |
 
 ## Agents
 
@@ -214,6 +218,17 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 ## Changelog
 
 See [CHANGELOG.md](CHANGELOG.md) for version history.
+
+### v2.1.0 (2026-01-02)
+
+- Added `orchestration-coordinator` skill for agent management and conflict resolution
+- Added `error-recovery` skill with retry logic and rollback workflows
+- Added `docs-generator` skill for OpenAPI, README, and architecture docs
+- Added database migration strategy to `code-architect` skill
+- Enhanced progress reporting with phase tracking and quality gates
+- Updated orchestration protocol with 6 phases
+- Added heartbeat monitoring and failure detection
+- Added checkpoint-based recovery for partial completions
 
 ### v2.0.0 (2024-12-25)
 

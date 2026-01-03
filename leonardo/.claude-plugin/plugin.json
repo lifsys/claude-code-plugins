@@ -116,7 +116,7 @@
       },
       {
         "name": "code-architect",
-        "description": "Database schema and API architecture design"
+        "description": "Database schema, API architecture, and migration strategy"
       },
       {
         "name": "implementation-engine",
@@ -125,6 +125,18 @@
       {
         "name": "browser-explorer",
         "description": "Interactive browser exploration and testing via Chrome extension"
+      },
+      {
+        "name": "orchestration-coordinator",
+        "description": "Master coordinator for parallel agent management, conflict detection, and progress tracking"
+      },
+      {
+        "name": "error-recovery",
+        "description": "Standardized error handling, retry logic, and rollback workflows"
+      },
+      {
+        "name": "docs-generator",
+        "description": "OpenAPI, README, architecture docs, and component documentation generation"
       }
     ],
     "agents": [

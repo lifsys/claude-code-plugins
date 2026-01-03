@@ -85,34 +85,57 @@ Deploy the `spec-orchestrator` skill to generate comprehensive XML specification
 - implementation_steps (9 steps minimum)
 - success_criteria
 
-### Phase 3: Parallel Agent Deployment
+### Phase 2.5: Infrastructure Design
+Deploy the `devops-architect` skill for infrastructure planning:
+- Research platforms (AWS, GCP, PaaS, self-hosted) in parallel
+- Apply thinking frameworks (first-principles, contrarian, economic)
+- Generate infrastructure_specification.xml
+- Include cost projections and scaling strategy
+
+### Phase 3: Orchestration Initialization
+Initialize the `orchestration-coordinator` skill:
+- Register all agents in the agent registry
+- Build dependency graph from specification
+- Set up heartbeat monitoring (30s timeout)
+- Configure conflict detection rules
+- Initialize progress tracking with phase status
+
+### Phase 4: Parallel Agent Deployment
 Launch specialized agents in parallel for maximum efficiency using the Task tool:
 
 **Group A (Architecture)** - Launch simultaneously:
-- `leonardo:architecture-agent` - Database schema, API design
-- `leonardo:frontend-agent` - UI components, styling
+- `leonardo:architecture-agent` - Database schema, API design, migrations
+- `leonardo:frontend-agent` - UI components, styling, animations
 - `leonardo:backend-agent` - Server logic, integrations
+
+**Group A+ (Infrastructure)** - Parallel with Group A:
+- `leonardo:devops-architect` - Infrastructure, CI/CD, deployment
 
 **Group B (Quality)** - Launch after Group A produces output:
 - `leonardo:test-agent` - Test generation, validation
 - `leonardo:review-agent` - Code review, security audit
-- `leonardo:docs-agent` - Documentation, README
+- `leonardo:docs-agent` - Documentation via `docs-generator` skill
 
-### Phase 4: Implementation Orchestration
+### Phase 5: Implementation Orchestration
 For each implementation step in the specification:
 1. Assign step to appropriate agent
-2. Monitor progress via TaskOutput
-3. Verify completion against success criteria
-4. Integrate outputs and resolve conflicts
-5. Run validation suite before proceeding
+2. Monitor progress via `orchestration-coordinator` heartbeats
+3. Detect conflicts and trigger arbitration protocol
+4. On agent failure, invoke `error-recovery` skill:
+   - Retry with exponential backoff (0s, 5s, 15s, 30s)
+   - Rollback to checkpoint if 3 consecutive failures
+   - Escalate to user if recovery fails
+5. Verify completion against success criteria
+6. Integrate outputs and resolve conflicts
 
-### Phase 5: Verification Loop
+### Phase 6: Verification Loop
 After implementation:
-1. Run all generated tests
+1. Run all generated tests via `/leonardo:test`
 2. Verify UI through browser automation (if applicable)
-3. Validate against success criteria
-4. Generate progress report
+3. Validate against success criteria from specification
+4. Generate progress report using standardized format
 5. Iterate on any failing components
+6. Update phase status in progress tracker
 
 ---
 
@@ -156,9 +179,27 @@ All Leonardo outputs must meet:
 
 ---
 
+## Skills Integration
+
+| Skill | Phase | Purpose |
+|-------|-------|---------|
+| `spec-orchestrator` | 2 | XML specification generation |
+| `devops-architect` | 2.5 | Infrastructure design |
+| `orchestration-coordinator` | 3-6 | Agent management, conflict resolution |
+| `error-recovery` | 5-6 | Failure handling, rollback |
+| `frontend-design` | 4 | UI aesthetics direction |
+| `code-architect` | 4 | Database schema, migrations |
+| `implementation-engine` | 4-5 | Code generation |
+| `quality-guardian` | 6 | Test execution, validation |
+| `docs-generator` | 4 | OpenAPI, README, docs |
+| `browser-explorer` | 6 | Interactive verification |
+
+---
+
 ## References
 
 - Specification Template: `references/spec_template.md`
 - Question Bank: `references/question_bank.md`
 - Feature Patterns: `references/feature_patterns.md`
 - Autonomous Coding Prompts: Integrated from anthropics/claude-quickstarts
+- Next.js Framework: `references/Claude Code Next.js Framework.md`

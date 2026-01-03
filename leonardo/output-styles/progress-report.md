@@ -2,12 +2,13 @@
 name: progress-report
 description: |
   Output style for progress reports and status updates during Leonardo development sessions.
-  Provides consistent formatting for tracking implementation progress.
+  Provides consistent formatting for tracking implementation progress with phase tracking,
+  quality gates, and comprehensive agent metrics.
 ---
 
 # Progress Report Output Style
 
-Format all progress updates using this style guide.
+Format all progress updates using this style guide. This format is used by the orchestration-coordinator to provide real-time visibility into session progress.
 
 ## Report Structure
 
@@ -16,11 +17,52 @@ Format all progress updates using this style guide.
 # Leonardo Progress Report
 
 **Project**: [Project Name]
-**Session**: [N] of [Total Expected]
-**Date**: [YYYY-MM-DD]
-**Duration**: [X hours]
+**Session ID**: leonardo-YYYY-MM-DD-NNN
+**Started**: YYYY-MM-DD HH:MM
+**Spec Version**: [hash or version]
 
 ---
+```
+
+### Phase Status (NEW)
+
+Track orchestration phases with timing:
+
+```markdown
+## Phase Status
+
+| Phase | Status | Started | Completed | Duration |
+|-------|--------|---------|-----------|----------|
+| Vision Capture | ✅ COMPLETE | 10:00 | 10:05 | 5m |
+| Specification | ✅ COMPLETE | 10:05 | 10:25 | 20m |
+| Infrastructure | ✅ COMPLETE | 10:25 | 10:35 | 10m |
+| Implementation | 🔄 IN_PROGRESS | 10:35 | - | 15m+ |
+| Testing | ⏳ PENDING | - | - | - |
+| Verification | ⏳ PENDING | - | - | - |
+
+**Current Phase**: Implementation (4/6)
+**Time Elapsed**: 50 minutes
+**Estimated Remaining**: 25 minutes
+```
+
+### Quality Gates (NEW)
+
+Track mandatory quality thresholds:
+
+```markdown
+## Quality Gates
+
+| Gate | Status | Current | Threshold | Pass |
+|------|--------|---------|-----------|------|
+| Unit Test Coverage | 🔄 | 72% | >80% | ❌ |
+| Unit Test Pass Rate | 🔄 | 100% | 100% | ✅ |
+| E2E Pass Rate | ⏳ | - | 100% | - |
+| Animation FPS | ⏳ | - | 60fps | - |
+| Accessibility | ⏳ | - | 0 critical | - |
+| Lighthouse Score | ⏳ | - | >90 | - |
+
+**Gates Passed**: 1/6
+**Blocking Issues**: Coverage at 72%, need 80%+
 ```
 
 ### Status Summary

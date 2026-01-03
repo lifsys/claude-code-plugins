@@ -115,8 +115,28 @@ leonardo/
 
 ---
 
+## Skills (10 Total)
+
+| Skill | Purpose |
+|-------|---------|
+| `spec-orchestrator` | XML specification generation |
+| `orchestration-coordinator` | Agent management, conflict resolution, progress tracking |
+| `error-recovery` | Failure handling, retry logic, rollback workflows |
+| `devops-architect` | Infrastructure and deployment design |
+| `code-architect` | Database schema, API design, migrations |
+| `frontend-design` | UI aesthetics with GSAP/Motion |
+| `implementation-engine` | Production code generation |
+| `quality-guardian` | Test execution protocol |
+| `docs-generator` | OpenAPI, README, architecture docs |
+| `browser-explorer` | Chrome extension exploration |
+
+---
+
 ## References
 
+- `skills/orchestration-coordinator/SKILL.md` - Agent coordination
+- `skills/error-recovery/SKILL.md` - Failure recovery protocols
+- `skills/docs-generator/SKILL.md` - Documentation generation
 - `skills/frontend-design/SKILL.md` - UI aesthetics with GSAP/Motion
 - `skills/browser-explorer/SKILL.md` - Chrome extension exploration
 - `skills/quality-guardian/SKILL.md` - Test execution protocol
