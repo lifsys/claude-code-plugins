@@ -1,121 +1,100 @@
 {
-  "$schema": "https://claude.ai/schemas/marketplace.json",
   "name": "lifsys-plugins",
-  "displayName": "LifSys Claude Code Plugins",
-  "description": "Collection of Claude Code plugins for autonomous development, legal assistance, prompt engineering, and more",
-  "version": "1.0.0",
-  "publisher": {
+  "owner": {
     "name": "LifSys",
-    "email": "dev@lifsys.com",
-    "url": "https://github.com/lifsys",
-    "verified": false
+    "email": "dev@lifsys.com"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lifsys/claude-code-plugins"
+  "metadata": {
+    "description": "Collection of Claude Code plugins for autonomous development, legal assistance, prompt engineering, and more",
+    "version": "1.0.0"
   },
-  "homepage": "https://github.com/lifsys/claude-code-plugins",
-  "license": "MIT",
   "plugins": [
     {
       "name": "leonardo",
-      "displayName": "Leonardo - Autonomous Development Orchestrator",
-      "path": "leonardo",
+      "source": "./leonardo",
+      "description": "Autonomous development orchestrator with parallel agents, XML specifications, and Playwright testing",
       "version": "2.1.0",
-      "description": "Integrated orchestration system for autonomous app development using parallel subagents, comprehensive XML specifications, and full-stack Playwright testing",
-      "categories": ["Development", "Testing", "Automation", "Code Generation", "DevOps"],
+      "author": {
+        "name": "LifSys",
+        "email": "dev@lifsys.com"
+      },
+      "homepage": "https://github.com/lifsys/claude-code-plugins/tree/main/leonardo",
+      "repository": "https://github.com/lifsys/claude-code-plugins",
+      "license": "MIT",
       "keywords": ["orchestration", "autonomous-coding", "playwright", "testing", "gsap", "framer-motion"],
-      "featured": true,
-      "verified": false,
-      "minClaudeCodeVersion": "1.0.0",
-      "capabilities": ["commands", "agents", "skills", "hooks", "templates"]
+      "category": "development"
     },
     {
       "name": "law-team-plugins",
-      "displayName": "Law Team Plugins",
-      "path": "law-team-plugins",
-      "version": "1.0.0",
+      "source": "./law-team-plugins",
       "description": "Legal assistance plugins for contracts, compliance, and business law",
-      "categories": ["Legal", "Business"],
-      "keywords": ["legal", "contracts", "compliance", "business-law"],
-      "featured": false,
-      "verified": false,
-      "minClaudeCodeVersion": "1.0.0",
-      "capabilities": ["skills", "agents"]
+      "version": "1.0.0",
+      "author": {
+        "name": "LifSys"
+      },
+      "license": "MIT",
+      "keywords": ["legal", "contracts", "compliance"],
+      "category": "legal"
     },
     {
       "name": "prompt-engineering-plugins",
-      "displayName": "Prompt Engineering Plugins",
-      "path": "prompt-engineering-plugins",
-      "version": "1.0.0",
+      "source": "./prompt-engineering-plugins",
       "description": "Tools for prompt debugging, refactoring, validation, and architecture",
-      "categories": ["Development", "AI"],
-      "keywords": ["prompts", "engineering", "debugging", "validation"],
-      "featured": false,
-      "verified": false,
-      "minClaudeCodeVersion": "1.0.0",
-      "capabilities": ["skills", "agents"]
+      "version": "1.0.0",
+      "author": {
+        "name": "LifSys"
+      },
+      "license": "MIT",
+      "keywords": ["prompts", "engineering", "debugging"],
+      "category": "development"
     },
     {
       "name": "prompt-builder",
-      "displayName": "Prompt Builder",
-      "path": "prompt-builder",
-      "version": "1.0.0",
+      "source": "./prompt-builder",
       "description": "Interactive prompt construction and optimization",
-      "categories": ["Development", "AI"],
-      "keywords": ["prompts", "builder", "optimization"],
-      "featured": false,
-      "verified": false,
-      "minClaudeCodeVersion": "1.0.0",
-      "capabilities": ["skills"]
+      "version": "1.0.0",
+      "author": {
+        "name": "LifSys"
+      },
+      "license": "MIT",
+      "keywords": ["prompts", "builder"],
+      "category": "development"
     },
     {
       "name": "reverse-engineer",
-      "displayName": "Reverse Engineer",
-      "path": "reverse-engineer",
-      "version": "1.0.0",
+      "source": "./reverse-engineer",
       "description": "Reverse engineering tools for code analysis",
-      "categories": ["Development", "Analysis"],
-      "keywords": ["reverse-engineering", "analysis", "code"],
-      "featured": false,
-      "verified": false,
-      "minClaudeCodeVersion": "1.0.0",
-      "capabilities": ["skills"]
+      "version": "1.0.0",
+      "author": {
+        "name": "LifSys"
+      },
+      "license": "MIT",
+      "keywords": ["reverse-engineering", "analysis"],
+      "category": "development"
     },
     {
       "name": "business-management-plugins",
-      "displayName": "Business Management Plugins",
-      "path": "business-management-plugins",
-      "version": "1.0.0",
+      "source": "./business-management-plugins",
       "description": "Business management tools and frameworks",
-      "categories": ["Business", "Management"],
-      "keywords": ["business", "management", "strategy"],
-      "featured": false,
-      "verified": false,
-      "minClaudeCodeVersion": "1.0.0",
-      "capabilities": ["skills", "agents"]
+      "version": "1.0.0",
+      "author": {
+        "name": "LifSys"
+      },
+      "license": "MIT",
+      "keywords": ["business", "management"],
+      "category": "business"
     },
     {
       "name": "sop-enforcer",
-      "displayName": "SOP Enforcer",
-      "path": "sop-enforcer",
-      "version": "1.0.0",
+      "source": "./sop-enforcer",
       "description": "Standard Operating Procedure enforcement and compliance",
-      "categories": ["Business", "Compliance"],
-      "keywords": ["sop", "procedures", "compliance", "enforcement"],
-      "featured": false,
-      "verified": false,
-      "minClaudeCodeVersion": "1.0.0",
-      "capabilities": ["skills", "hooks"]
+      "version": "1.0.0",
+      "author": {
+        "name": "LifSys"
+      },
+      "license": "MIT",
+      "keywords": ["sop", "compliance"],
+      "category": "business"
     }
-  ],
-  "categories": [
-    {"id": "development", "name": "Development", "description": "Software development tools"},
-    {"id": "testing", "name": "Testing", "description": "Testing and QA tools"},
-    {"id": "automation", "name": "Automation", "description": "Workflow automation"},
-    {"id": "legal", "name": "Legal", "description": "Legal assistance tools"},
-    {"id": "business", "name": "Business", "description": "Business management tools"},
-    {"id": "ai", "name": "AI", "description": "AI and prompt engineering tools"}
-  ],
-  "featured": ["leonardo"]
+  ]
 }
