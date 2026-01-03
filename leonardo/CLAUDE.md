@@ -134,10 +134,17 @@ leonardo/
 
 ## References
 
+**Skills:**
 - `skills/orchestration-coordinator/SKILL.md` - Agent coordination
 - `skills/error-recovery/SKILL.md` - Failure recovery protocols
 - `skills/docs-generator/SKILL.md` - Documentation generation
 - `skills/frontend-design/SKILL.md` - UI aesthetics with GSAP/Motion
 - `skills/browser-explorer/SKILL.md` - Chrome extension exploration
 - `skills/quality-guardian/SKILL.md` - Test execution protocol
+
+**Framework Guides:**
+- `references/Claude Code Next.js Framework.md` - Enhanced FDA architecture
+- `references/nextjs-16-god-tier.md` - Bleeding-edge Next.js 16 patterns (Generative UI, R3F shaders, Lenis)
+
+**Testing:**
 - `templates/testing/playwright.config.ts` - Test configuration
