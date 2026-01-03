@@ -124,6 +124,42 @@ When conflicts are detected, follow this resolution order:
    └── Resource constraints (cost, time, scope)
 ```
 
+### User Escalation Protocol (MANDATORY AskUserQuestion)
+
+**When escalating to user, ALWAYS use AskUserQuestion with specific options:**
+
+```
+Use AskUserQuestion tool:
+- question: "Conflict detected: [describe conflict]. How should this be resolved?"
+  header: "Conflict"
+  multiSelect: false
+  options:
+    - label: "Accept Agent A's approach"
+      description: "[Describe Agent A's proposed solution]"
+    - label: "Accept Agent B's approach"
+      description: "[Describe Agent B's proposed solution]"
+    - label: "Merge both approaches"
+      description: "Combine elements from both solutions"
+    - label: "Pause and let me decide"
+      description: "Stop orchestration while I review the details"
+```
+
+**For breaking changes:**
+
+```
+Use AskUserQuestion tool:
+- question: "This change may break existing functionality. Proceed?"
+  header: "Breaking"
+  multiSelect: false
+  options:
+    - label: "Proceed with breaking change"
+      description: "Accept the change and update dependent code"
+    - label: "Find alternative approach"
+      description: "Research non-breaking solutions"
+    - label: "Abort this change"
+      description: "Cancel the change and continue without it"
+```
+
 ### Arbitration Protocol
 
 ```python

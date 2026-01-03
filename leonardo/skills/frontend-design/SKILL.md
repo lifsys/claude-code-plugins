@@ -13,13 +13,47 @@ This skill guides creation of distinctive, production-grade frontend interfaces 
 
 The user provides frontend requirements: a component, page, application, or interface to build. They may include context about the purpose, audience, or technical constraints.
 
-## Design Thinking
+## Design Thinking (MANDATORY AskUserQuestion)
+
+**BEFORE any UI implementation, you MUST establish aesthetic direction using AskUserQuestion:**
+
+```
+Use AskUserQuestion tool:
+- question: "What aesthetic direction should we take?"
+  header: "Aesthetic"
+  multiSelect: false
+  options:
+    - label: "Luxury/Refined"
+      description: "Elegant typography, gold accents, sophisticated animations"
+    - label: "Brutalist/Raw"
+      description: "Bold typography, high contrast, industrial feel"
+    - label: "Playful/Friendly"
+      description: "Rounded shapes, bright colors, bouncy animations"
+    - label: "Editorial/Magazine"
+      description: "Serif fonts, clean layouts, sophisticated imagery"
+```
+
+```
+Use AskUserQuestion tool:
+- question: "What level of animation intensity?"
+  header: "Motion"
+  multiSelect: false
+  options:
+    - label: "High impact (Recommended)"
+      description: "Page transitions, staggered reveals, scroll animations"
+    - label: "Subtle polish"
+      description: "Micro-interactions, hover states, loading states"
+    - label: "Minimal motion"
+      description: "Reduced motion friendly, essential animations only"
+    - label: "No animations"
+      description: "Static UI, maximum performance"
+```
 
 Before coding, understand the context and commit to a BOLD aesthetic direction:
 
 - **Purpose**: What problem does this interface solve? Who uses it?
-- **Tone**: Pick an extreme: brutally minimal, maximalist chaos, retro-futuristic, organic/natural, luxury/refined, playful/toy-like, editorial/magazine, brutalist/raw, art deco/geometric, soft/pastel, industrial/utilitarian, etc. There are so many flavors to choose from. Use these for inspiration but design one that is true to the aesthetic direction.
-- **Constraints**: Technical requirements (framework, performance, accessibility).
+- **Tone**: Execute the chosen aesthetic with precision and intentionality
+- **Constraints**: Technical requirements (framework, performance, accessibility)
 - **Differentiation**: What makes this UNFORGETTABLE? What's the one thing someone will remember?
 
 **CRITICAL**: Choose a clear conceptual direction and execute it with precision. Bold maximalism and refined minimalism both work - the key is intentionality, not intensity.
@@ -721,6 +755,29 @@ Before completing frontend implementation:
 For complete implementation details, see:
 - `references/gsap-animation-guide.md` - Full GSAP patterns with ScrollTrigger, Timeline, transforms
 - `references/motion-framer-guide.md` - Complete Motion/Framer Motion guide for floating menus, gestures
+- `references/nextjs-16-god-tier.md` - Bleeding-edge Next.js 16 patterns (Generative UI, R3F shaders, Lenis)
+
+---
+
+## Next.js 16 God Tier Integration
+
+When building Next.js 16 applications, apply these premium patterns:
+
+### Detection Trigger
+If project uses Next.js 16 or mentions AI/streaming features, automatically apply:
+
+| Pattern | Purpose |
+|---------|---------|
+| **Lenis Scroll** | Premium "weighted" scroll feel |
+| **R3F Fluid Shaders** | GPU-powered fluid backgrounds |
+| **Generative UI** | Stream React components from LLM |
+| **Aceternity UI** | High-end Bento grids and effects |
+
+### Implementation Notes
+- Push `'use client'` to leaves, keep RSC at roots
+- Use Framer Motion for client-side animations
+- Pair with Geist Sans or distinctive display fonts
+- See `references/nextjs-16-god-tier.md` for complete code examples
 
 ---
 

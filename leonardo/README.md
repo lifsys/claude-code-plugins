@@ -15,6 +15,8 @@ A comprehensive Claude Code plugin for orchestrating autonomous software develop
 - **Frontend Design System** - GSAP and Motion/Framer animation guides
 - **Quality Guardian** - Mandatory test execution before handoff
 - **DevOps Architecture** - Infrastructure, CI/CD, and deployment design
+- **User Validation Checkpoints** - AskUserQuestion integration at 15+ decision points
+- **Next.js 16 God Tier Stack** - Bleeding-edge patterns for AI/streaming applications
 
 ## Installation
 
@@ -221,9 +223,25 @@ See [CHANGELOG.md](CHANGELOG.md) for version history.
 
 ### v2.1.0 (2026-01-02)
 
+**New Skills:**
 - Added `orchestration-coordinator` skill for agent management and conflict resolution
 - Added `error-recovery` skill with retry logic and rollback workflows
 - Added `docs-generator` skill for OpenAPI, README, and architecture docs
+
+**AskUserQuestion Integration (15+ checkpoints):**
+- `spec-orchestrator`: Project type, scale, mode, tech stack, pre-delivery confirmation
+- `orchestration-coordinator`: Conflict resolution, breaking change approval
+- `devops-architect`: User scale, budget, expertise level
+- `frontend-design`: Aesthetic direction, animation intensity
+- `quality-guardian`: Validation scope selection
+- `docs-generator`: Documentation scope, detail level
+
+**Next.js 16 God Tier Stack:**
+- Added `references/nextjs-16-god-tier.md` with Generative UI, R3F shaders, Lenis scroll
+- Integrated detection triggers in `code-architect` and `frontend-design` skills
+- Auto-applies patterns when Next.js 16 or AI/streaming detected
+
+**Infrastructure Improvements:**
 - Added database migration strategy to `code-architect` skill
 - Enhanced progress reporting with phase tracking and quality gates
 - Updated orchestration protocol with 6 phases

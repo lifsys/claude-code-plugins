@@ -10,6 +10,26 @@ description: |
 
 Ensure implementations meet all success criteria and production standards. This skill validates completeness, quality, and specification compliance.
 
+## Pre-Validation Checkpoint (MANDATORY AskUserQuestion)
+
+**BEFORE running validation, confirm scope with user:**
+
+```
+Use AskUserQuestion tool:
+- question: "What validation scope should be applied?"
+  header: "Scope"
+  multiSelect: false
+  options:
+    - label: "Full validation (Recommended)"
+      description: "All tests, accessibility, performance, security"
+    - label: "Quick validation"
+      description: "Unit tests and critical E2E only"
+    - label: "Specific category"
+      description: "Let me choose which tests to run"
+```
+
+---
+
 ## Validation Domains
 
 ### 1. Specification Compliance

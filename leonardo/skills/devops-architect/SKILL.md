@@ -36,9 +36,55 @@ Invoke this skill when the user requests:
 
 ## Orchestration Protocol
 
-### Phase 1: Requirements Analysis
+### Phase 1: Requirements Analysis (MANDATORY AskUserQuestion)
 
-Extract infrastructure requirements from project specification:
+**BEFORE researching platforms, you MUST gather requirements using AskUserQuestion:**
+
+```
+Use AskUserQuestion tool:
+- question: "What is your expected user scale?"
+  header: "Scale"
+  multiSelect: false
+  options:
+    - label: "MVP (<1K users)"
+      description: "Starting out, minimal infrastructure needed"
+    - label: "Growth (1K-100K users)"
+      description: "Scaling up, need reliable infrastructure"
+    - label: "Scale (100K+ users)"
+      description: "High traffic, need enterprise-grade infrastructure"
+```
+
+```
+Use AskUserQuestion tool:
+- question: "What is your monthly infrastructure budget?"
+  header: "Budget"
+  multiSelect: false
+  options:
+    - label: "Hobby ($0-20/month)"
+      description: "Free tiers and minimal paid services"
+    - label: "Startup ($20-500/month)"
+      description: "Reasonable budget for production workloads"
+    - label: "Enterprise ($500+/month)"
+      description: "Full budget for high availability and compliance"
+```
+
+```
+Use AskUserQuestion tool:
+- question: "What is your team's DevOps expertise level?"
+  header: "Expertise"
+  multiSelect: false
+  options:
+    - label: "None - need managed services"
+      description: "Prefer PaaS like Vercel, Railway, Render"
+    - label: "Basic - can manage containers"
+      description: "Comfortable with Docker, simple deployments"
+    - label: "Intermediate - can manage Kubernetes"
+      description: "Can handle complex orchestration"
+    - label: "Expert - can build custom infrastructure"
+      description: "Full IaC, self-hosted options viable"
+```
+
+Extract additional requirements from project specification:
 
 ```yaml
 requirements_extraction:
@@ -47,14 +93,6 @@ requirements_extraction:
     - core_features (scale indicators, real-time needs)
     - api_endpoints (traffic patterns)
     - database_schema (data volume, relationships)
-
-  questions_to_ask:
-    - "Expected user scale? (MVP: <1K, Growth: 1K-100K, Scale: 100K+)"
-    - "Budget constraints? (Hobby: $0-20, Startup: $20-500, Enterprise: $500+)"
-    - "Team DevOps expertise? (None, Basic, Intermediate, Expert)"
-    - "Compliance requirements? (None, SOC2, HIPAA, PCI-DSS, GDPR)"
-    - "Geographic requirements? (Single region, Multi-region, Global)"
-    - "Availability requirements? (Best effort, 99.9%, 99.99%)"
 ```
 
 ### Phase 2: Parallel Platform Research

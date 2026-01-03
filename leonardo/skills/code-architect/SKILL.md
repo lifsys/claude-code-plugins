@@ -344,3 +344,40 @@ This skill produces artifacts consumed by:
 - `backend-agent` - Uses API/database designs
 - `test-agent` - Uses structure for test file organization
 - `quality-guardian` - Validates migration safety and completeness
+
+---
+
+## Framework-Specific Architecture
+
+### Next.js 16 Detection
+
+When `technology_stack.frontend.framework` is "Next.js 16" or includes AI/streaming features:
+
+**Apply God Tier Patterns** from `references/nextjs-16-god-tier.md`:
+
+| Pattern | Application |
+|---------|-------------|
+| **Drizzle ORM** | Use Drizzle instead of Prisma for serverless environments |
+| **Server Actions** | Prefer over API routes for mutations |
+| **Hybrid Composition** | RSC for data, Client Components for interactivity |
+| **streamUI** | For AI features, use Vercel AI SDK Generative UI |
+
+**Architecture Adjustments:**
+```
+app/
+├── actions/           # Server Actions (mutations)
+├── db/
+│   ├── schema.ts     # Drizzle schema
+│   └── index.ts      # Drizzle client
+├── components/
+│   ├── server/       # RSC components (data fetching)
+│   └── client/       # 'use client' islands
+└── lib/
+    └── ai/           # AI SDK integrations
+```
+
+**Detection Trigger:**
+- User mentions "Next.js 16", "AI", "streaming UI", "generative"
+- Spec includes `streamUI`, `Vercel AI SDK`, or `Drizzle`
+
+→ Automatically apply god tier patterns from reference documentation.

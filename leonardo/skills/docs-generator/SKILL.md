@@ -16,6 +16,42 @@ This skill activates when:
 
 ---
 
+## Pre-Generation Checkpoint (MANDATORY AskUserQuestion)
+
+**BEFORE generating documentation, confirm scope with user:**
+
+```
+Use AskUserQuestion tool:
+- question: "What documentation should be generated?"
+  header: "Docs Scope"
+  multiSelect: true
+  options:
+    - label: "README.md (Recommended)"
+      description: "Project overview, installation, usage, and quick start"
+    - label: "OpenAPI specification"
+      description: "API documentation in OpenAPI 3.0 format"
+    - label: "Architecture docs"
+      description: "System diagrams, data flow, component hierarchy"
+    - label: "Component reference"
+      description: "Frontend component props, usage examples"
+```
+
+```
+Use AskUserQuestion tool:
+- question: "What level of detail for documentation?"
+  header: "Detail"
+  multiSelect: false
+  options:
+    - label: "Comprehensive (Recommended)"
+      description: "Full documentation with examples, diagrams, and API reference"
+    - label: "Essential"
+      description: "README and basic API docs only"
+    - label: "Minimal"
+      description: "Just README.md with installation and usage"
+```
+
+---
+
 ## Documentation Types
 
 ### 1. OpenAPI Specification

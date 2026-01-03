@@ -117,18 +117,24 @@ leonardo/
 
 ## Skills (10 Total)
 
-| Skill | Purpose |
-|-------|---------|
-| `spec-orchestrator` | XML specification generation |
-| `orchestration-coordinator` | Agent management, conflict resolution, progress tracking |
-| `error-recovery` | Failure handling, retry logic, rollback workflows |
-| `devops-architect` | Infrastructure and deployment design |
-| `code-architect` | Database schema, API design, migrations |
-| `frontend-design` | UI aesthetics with GSAP/Motion |
-| `implementation-engine` | Production code generation |
-| `quality-guardian` | Test execution protocol |
-| `docs-generator` | OpenAPI, README, architecture docs |
-| `browser-explorer` | Chrome extension exploration |
+| Skill | Purpose | User Checkpoints |
+|-------|---------|------------------|
+| `spec-orchestrator` | XML specification generation | Project type, scale, mode, tech stack, confirmation |
+| `orchestration-coordinator` | Agent management, conflict resolution | Conflict resolution, breaking changes |
+| `error-recovery` | Failure handling, retry logic, rollback | Recovery strategy selection |
+| `devops-architect` | Infrastructure and deployment design | Scale, budget, expertise level |
+| `code-architect` | Database schema, API design, migrations | N/A (consumes spec) |
+| `frontend-design` | UI aesthetics with GSAP/Motion | Aesthetic direction, animation intensity |
+| `implementation-engine` | Production code generation | N/A (consumes spec) |
+| `quality-guardian` | Test execution protocol | Validation scope |
+| `docs-generator` | OpenAPI, README, architecture docs | Documentation scope, detail level |
+| `browser-explorer` | Chrome extension exploration | N/A (interactive) |
+
+### AskUserQuestion Integration
+
+All skills that make significant decisions use `AskUserQuestion` to ensure user validation at key checkpoints. This prevents assumptions and ensures output matches user intent.
+
+**Total Checkpoints**: 15+ decision points across all skills
 
 ---
 

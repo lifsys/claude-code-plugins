@@ -31,31 +31,56 @@ Invoke this skill when the user requests:
 
 ## Specification Generation Protocol
 
-### Step 1: Initial Assessment
+### Step 1: Initial Assessment (MANDATORY AskUserQuestion)
 
-Determine project parameters:
-```yaml
-assessment_questions:
-  - "What type of project? (Web App, CLI, API, Library)"
-  - "What is the scale? (MVP, Production, Enterprise)"
-  - "Reference application to model? (URL or name)"
-  - "Primary user persona?"
-  - "Core problem being solved?"
+**BEFORE generating any specification content, you MUST use AskUserQuestion:**
+
+```
+Use AskUserQuestion tool:
+- question: "What type of project are you building?"
+  header: "Project Type"
+  multiSelect: false
+  options:
+    - label: "Web Application"
+      description: "Full-stack web app with frontend, backend, and database"
+    - label: "API Service"
+      description: "Backend API with database, no frontend UI"
+    - label: "CLI Tool"
+      description: "Command-line application with terminal interface"
+    - label: "Library/Package"
+      description: "Reusable code package for other projects"
 ```
 
-### Step 2: Mode Selection
+**THEN ask about scale:**
 
-Ask user to choose specification mode:
-```yaml
+```
+Use AskUserQuestion tool:
+- question: "What is the target scale and quality level?"
+  header: "Scale"
+  multiSelect: false
+  options:
+    - label: "MVP (Recommended for new ideas)"
+      description: "Core features only, fastest path to working product"
+    - label: "Production"
+      description: "Complete feature set, production-ready quality"
+    - label: "Enterprise"
+      description: "Full features plus audit logging, compliance, multi-tenant"
+```
+
+### Step 2: Mode Selection (MANDATORY AskUserQuestion)
+
+```
+Use AskUserQuestion tool:
 - question: "How should the specification be generated?"
   header: "Spec Mode"
+  multiSelect: false
   options:
     - label: "Full Automation (Recommended)"
       description: "AI generates complete spec using research and best practices"
     - label: "Guided Discovery"
-      description: "Interactive questioning for each decision"
-    - label: "Template Fill"
-      description: "Provide answers for key sections only"
+      description: "Interactive questioning for each decision point"
+    - label: "Minimal Viable"
+      description: "Core features only, fastest path to working product"
 ```
 
 ### Step 3: Parallel Research Phase
@@ -72,6 +97,24 @@ For **Full Automation** mode, launch parallel research:
 - WebFetch the reference application
 - Extract feature list and UI patterns
 - Identify technology stack
+
+### Step 3.5: Technology Stack Confirmation (MANDATORY AskUserQuestion)
+
+**After research, BEFORE generating spec, confirm technology choices:**
+
+```
+Use AskUserQuestion tool:
+- question: "Confirm the recommended technology stack?"
+  header: "Tech Stack"
+  multiSelect: false
+  options:
+    - label: "Accept recommendations"
+      description: "[Framework], [Database], [Styling] as researched"
+    - label: "Use Next.js 16 God Tier stack"
+      description: "Next.js 16 + Drizzle + Supabase + R3F + Lenis (bleeding edge)"
+    - label: "I have specific preferences"
+      description: "Let me specify my preferred technologies"
+```
 
 ### Step 4: Section-by-Section Generation
 
@@ -347,6 +390,26 @@ Before delivering specification, verify:
 - [ ] `<success_criteria>` with ALL 4 categories
 
 **If ANY section is incomplete, DO NOT deliver. Complete it first.**
+
+### Pre-Delivery Confirmation (MANDATORY AskUserQuestion)
+
+**BEFORE delivering the specification, you MUST confirm with user:**
+
+```
+Use AskUserQuestion tool:
+- question: "Specification is ready. How would you like to proceed?"
+  header: "Deliver"
+  multiSelect: false
+  options:
+    - label: "Deliver and start implementation (Recommended)"
+      description: "Save spec and deploy implementation agents immediately"
+    - label: "Deliver for review only"
+      description: "Save spec but wait for my approval before implementing"
+    - label: "Show me the spec first"
+      description: "Display the full specification for review before saving"
+    - label: "Make adjustments"
+      description: "I want to modify some sections before finalizing"
+```
 
 ---
 
